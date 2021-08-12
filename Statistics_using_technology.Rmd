@@ -15,7 +15,7 @@ biblio-style: apalike
 ---
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 
 # Preface {-}
@@ -79,7 +79,7 @@ ISBN:  978-0-359-84204-9
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 # Statistical Basics
 
@@ -749,7 +749,7 @@ Advanced Solutions International, Inc. (n.d.). Retrieved July 16, 2019, from htt
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 # Graphical Descriptions of Data
 
@@ -788,7 +788,6 @@ You will need to turn on the package mosaic. The NHANES package contains a data 
 library("mosaicCore")
 library("mosaic")
 library("NHANES")
-library("dplyr")
 ```
 
 ```{r setup2a}
@@ -1315,7 +1314,7 @@ Since the Density data frame is for all countries, a new data frame must be crea
 ```{r africa-filtering, warning=FALSE}
 Africa <-
   Density %>%
-  dplyr::filter(Region == "Sub-Saharan Africa")
+  filter(Region == "Sub-Saharan Africa")
 head(Africa)
 ```
 
@@ -1835,13 +1834,12 @@ output:
 ---
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 
 ```{r setup3, include=FALSE}
 library("mosaic")
 library("MASS")
-library("dplyr")
 ```
 
 # Numerical Descriptions of Data
@@ -1971,7 +1969,7 @@ The minimum weight of a cat in this data frame is 2 kg and the maximum weight of
 Now create two new data sets. One data set will exclude the maximum value. You can call it anything you want, but it would make sense to call it something like nomax. The command to create the new data set is:
 
 ```{r filter-cats-data,warning=FALSE}
-nomax <- dplyr::filter(cats, Bwt<3.9)
+nomax <- filter(cats, Bwt<3.9)
 ```
 
 Then create a data set that excludes the minimum value; call it nomin:
@@ -2008,7 +2006,10 @@ To understand how the different measures of center related to skewed or symmetri
 
 **Graph \#3.1.2: Mean, Median, Mode as Related to a Distribution**
 
-![Graphs of symmetric, skewed right and skewed left](centers_distribution.png)
+```{r, include=FALSE, fig.alt="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines"}
+knitr::include_graphics("centers_distribution.png")
+```
+
 
 One last type of average is a weighted average. **Weighted averages** are used quite often in different situations. Some teachers use them in calculating a student's grade in the course, or a grade on a project. Some employers use them in employee evaluations. The idea is that some activities are more
 important than others. As an example, a full time teacher at a community college may be evaluated on their service to the college, their service to the community, whether their paperwork is turned in on time, and their teaching. However, teaching is much more important than whether their paperwork is turned in on time. When the evaluation is completed, more weight needs to be given to the teaching and less to the paperwork. This is a weighted average.
@@ -2235,14 +2236,19 @@ e.  If it is your job to find places in the budget to reduce costs, which averag
 5.  Looking at graph \#3.1.1, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?
 
  **Graph \#3.1.1: Skewed or Symmetric Graph**
- 
-![Graphs of symmetric, skewed right and skewed left](graph_3_1_1.png)
+
+```{r, include=FALSE,fig.alt="histogram with bars on left tallest and then gradually getting shorter as you go to the right"}
+knitr::include_graphics("graph_3_1_1.png")
+```
+
 
 6. Looking at graph \#3.1.2, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?
 
  **Graph \#3.1.2: Skewed or Symmetric Graph**
  
-![Graphs of symmetric, skewed right and skewed left](graph_3_1_2.png)
+```{r, include=FALSE, fig.alt="histogram with bars on left shortest and then gradually getting taller as you go to the right"}
+knitr::include_graphics("graph_3_1_1.png")
+```
 
 7. An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward the goals, job effectiveness, competencies, and CCC core values. Suppose for a specific employee, goal 1 has a weight of 30%, goal 2 has a weight of 20%, job effectiveness has a weight of 25%, competency 1 has a weight of 4%, competency 2 has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 3%, competency 5 has a weight of 2%, and core values has a weight of 10%. Suppose the employee has scores of 3.0 for goal 1, 3.0 for goal 2, 2.0 for job effectiveness, 3.0 for competency 1, 2.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, 4.0 for competency 5, and 3.0 for core values. Find the weighted average score for this employee. If an employee has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?
 
@@ -2917,7 +2923,7 @@ Retrieved from <http://apps.who.int/gho/data/node.main.165?lang=en>
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 # Probability
 
@@ -4037,7 +4043,7 @@ M&M's Color Distribution Analysis. (n.d.). Retrieved July 11, 2019, from https:/
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 # Discrete Probability Distributions
 
@@ -4695,7 +4701,7 @@ output:
 ---
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 # Continuous Probability Distributions
 
@@ -4825,7 +4831,10 @@ Approximately 99.7% of the data is within three standard deviations of the mean.
 
 **Image \#6.1: Empirical Rule**
 
-![Graph of Empirical Rule](Empirical_rule.png)
+```{r, include=FALSE, fig.alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations"}
+knitr::include_graphics("Empirical_rule.png")
+```
+
 
 Be careful, there is still some area left over in each end. Remember, the maximum a probability can be is 100%, so if you calculate you will see that for both ends together there is 0.3% of the curve. Because of
 symmetry, you can divide this equally between both ends and find that there is 0.15% in each tail beyond the 3rd standard deviations.
@@ -5702,7 +5711,7 @@ US Department of Agriculture, Agricultural Research Service. (2012).
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 ```{r setup7, echo=FALSE, warning=FALSE}
 library("mosaic")
@@ -6910,7 +6919,7 @@ output:
 ---
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 ```{r setup8, include=FALSE, warning=FALSE}
 library("mosaic")
@@ -6960,16 +6969,19 @@ One last thing to know about confidence is how the sample size and confidence le
 Think about shooting an arrow into the target. Suppose you are really good at that and that you have a 90% chance of hitting the bull's eye. Now the bull's eye is very small. Since you hit the bull's eye
 approximately 90% of the time, then you probably hit inside the next ring out 95% of the time. You have a better chance of doing this, but the circle is bigger. You probably have a 99% chance of hitting the target, but that is a much bigger circle to hit. You can see, as your confidence in hitting the target increases, the circle you hit gets bigger. The same is true for confidence intervals. This is demonstrated in figure \#8.1.1.
 
-
- ![figure of Affect of Confidence Level](effect_confidence_level.png)
+```{r, include=FALSE, fig.alt="Graph showing that 90% confident interval is narrower than a 95% confident interval, which is narrower than a 99% confidence interval"}
+knitr::include_graphics("effect_confidence_level.png")
+```
 
 
 The higher level of confidence makes a wider interval. There's a trade off between width and confidence level. You can be really confident about your answer but your answer will not be very precise. Or you can have a precise answer (small margin of error) but not be very confident about your answer.
 
 Now look at how the sample size affects the size of the interval. Suppose figure \#8.1.2 represents confidence intervals calculated on a 95% interval. A larger sample size from a representative sample makes the width of the interval narrower. This makes sense. Large samples are closer to the true population so the point estimate is pretty close to the true value.
 
+```{r, include=FALSE, fig.alt="Graph showing that a confident interval created with a sample size of 30 is wider than a confident interval created with a sample size of 100, which is wider than a confidence interval created with a sample size of 1000."}
+knitr::include_graphics("effect_sample_size.png")
+```
 
- ![Figure of Affect of Sample Size](effect_sample_size.png)
 
 
 Now you know everything you need to know about confidence intervals except for the actual formula. The formula depends on which parameter you are trying to estimate. With different situations you will be given the confidence interval for that parameter.
@@ -7429,7 +7441,7 @@ Maintaining Balance while Concentrating. (n.d.). Retrieved July 19, 2019, from h
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 ```{r setup9, echo=FALSE, warning=FALSE}
 library("tidyverse")
@@ -8613,7 +8625,7 @@ http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_NIPS_InfantVitK_ShotData
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 ```{r chapter-10-setup, echo=FALSE, warning=FALSE}
 library("mosaic")
@@ -9473,7 +9485,7 @@ http://lib.stat.cmu.edu/DASL/Datafiles/cigcancerdat.html
 
 ```{r include=FALSE, cache=FALSE}
 library("dplyr")
-filter <- dplyr::filter
+filter <- dplyr::filter #because stats masks dplyr
 ```
 # Chi-Square and ANOVA Tests
 

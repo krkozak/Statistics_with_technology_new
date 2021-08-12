@@ -839,16 +839,16 @@ The standard deviation of BMI is not known for Australians. To answer this quest
 <pre><code>## # A tibble: 10 × 76
 ##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
 ##    &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;   
-##  1 60213 2009_10  male      28 &quot; 20-29&quot;        340 Hispanic
-##  2 62575 2011_12  female    24 &quot; 20-29&quot;         NA White   
-##  3 62435 2011_12  female     0 &quot; 0-9&quot;            7 White   
-##  4 71764 2011_12  male      33 &quot; 30-39&quot;         NA Other   
-##  5 66228 2011_12  male      28 &quot; 20-29&quot;         NA White   
-##  6 67741 2011_12  female    28 &quot; 20-29&quot;         NA White   
-##  7 63665 2011_12  male      56 &quot; 50-59&quot;         NA Hispanic
-##  8 70810 2011_12  female     3 &quot; 0-9&quot;           NA Other   
-##  9 65133 2011_12  female    47 &quot; 40-49&quot;         NA White   
-## 10 68058 2011_12  male      50 &quot; 50-59&quot;         NA White   
+##  1 54108 2009_10  female    22 &quot; 20-29&quot;        273 Black   
+##  2 59089 2009_10  male      39 &quot; 30-39&quot;        479 White   
+##  3 55951 2009_10  female    33 &quot; 30-39&quot;        405 Other   
+##  4 67285 2011_12  female    70 &quot; 70+&quot;           NA Hispanic
+##  5 62922 2011_12  female    31 &quot; 30-39&quot;         NA White   
+##  6 68423 2011_12  female    42 &quot; 40-49&quot;         NA White   
+##  7 69284 2011_12  male      53 &quot; 50-59&quot;         NA Hispanic
+##  8 63206 2011_12  male      38 &quot; 30-39&quot;         NA Black   
+##  9 51905 2009_10  female    52 &quot; 50-59&quot;        634 Black   
+## 10 54843 2009_10  male      21 &quot; 20-29&quot;        259 White   
 ## # … with 69 more variables: Race3 &lt;fct&gt;, Education &lt;fct&gt;,
 ## #   MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;,
 ## #   Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
@@ -877,24 +877,24 @@ The standard deviation of BMI is not known for Australians. To answer this quest
 ## #   SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
 <p>The mean BMI from this sample is</p>
 <div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="one-sample-inference.html#cb312-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>BMI, <span class="dt">data=</span>sample_NHANES_<span class="dv">10</span>, mean)</span></code></pre></div>
-<pre><code>##   response     mean
-## 1      BMI 26.25125</code></pre>
+<pre><code>##   response   mean
+## 1      BMI 27.494</code></pre>
 <p>The sample mean for Americans is different from the mean BMI for Australians, but could it just be by chance. Suppose you take another sample of size 10, but you only have these 10 BMIs to work with. So how could you do this. One way is to assume that the sample you took is representative of the entire population, and so you create a population by copying this sample over and over again. So you could have over 1000 copies of this sample of 10 BMIs. Then take a sample of size 10 from this created population. When doing this, you could conceivably choose the same number several times that was in the original sample and not choose some of the numbers that were in the original sample. Instead of physically creating this new population, you could just take samples from your original sample but with replacement. This means that you randomly pick the first number, record it, and then put it back that value back before collecting the next number. This kind a sampling is called randomization sampling. A sample using randomization could be</p>
 <p>Table #7.3.1a</p>
 <div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="one-sample-inference.html#cb314-1"></a><span class="kw">resample</span>(sample_NHANES_<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 10 × 77
 ##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
 ##    &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;   
-##  1 71764 2011_12  male      33 &quot; 30-39&quot;         NA Other   
-##  2 60213 2009_10  male      28 &quot; 20-29&quot;        340 Hispanic
-##  3 70810 2011_12  female     3 &quot; 0-9&quot;           NA Other   
-##  4 62575 2011_12  female    24 &quot; 20-29&quot;         NA White   
-##  5 71764 2011_12  male      33 &quot; 30-39&quot;         NA Other   
-##  6 62575 2011_12  female    24 &quot; 20-29&quot;         NA White   
-##  7 65133 2011_12  female    47 &quot; 40-49&quot;         NA White   
-##  8 60213 2009_10  male      28 &quot; 20-29&quot;        340 Hispanic
-##  9 68058 2011_12  male      50 &quot; 50-59&quot;         NA White   
-## 10 62435 2011_12  female     0 &quot; 0-9&quot;            7 White   
+##  1 54108 2009_10  female    22 &quot; 20-29&quot;        273 Black   
+##  2 67285 2011_12  female    70 &quot; 70+&quot;           NA Hispanic
+##  3 51905 2009_10  female    52 &quot; 50-59&quot;        634 Black   
+##  4 63206 2011_12  male      38 &quot; 30-39&quot;         NA Black   
+##  5 68423 2011_12  female    42 &quot; 40-49&quot;         NA White   
+##  6 54843 2009_10  male      21 &quot; 20-29&quot;        259 White   
+##  7 51905 2009_10  female    52 &quot; 50-59&quot;        634 Black   
+##  8 55951 2009_10  female    33 &quot; 30-39&quot;        405 Other   
+##  9 68423 2011_12  female    42 &quot; 40-49&quot;         NA White   
+## 10 67285 2011_12  female    70 &quot; 70+&quot;           NA Hispanic
 ## # … with 70 more variables: Race3 &lt;fct&gt;, Education &lt;fct&gt;,
 ## #   MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;,
 ## #   Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
@@ -929,8 +929,8 @@ The standard deviation of BMI is not known for Australians. To answer this quest
 Figure 7.1: Resampling distribution
 </p>
 </div>
-<pre><code>##   response    mean       sd
-## 1      mea 0.93057 2.081971</code></pre>
+<pre><code>##   response      mean       sd
+## 1      mea -2.548115 1.623234</code></pre>
 <p>Notice the sample mean from the resampling is very close to 0, so that means that the US BMI are not that different from the Australian BMI. There doesn’t seem to be enough evidence to show that the US BMI is different from the Australian BMI. One note, the sample size used here was 10 so you could see the sample, but really the sample size should be more than 100 for this method to be valid.</p>
 <p>So this is one way to answer the question about if there is evidence to show a population mean is different from a value. This is actually the method that Ronald Fisher developed when he create all the foundation work that he did in statistics in the early 1900s. However, at the time, computers didn’t exist, so taking 100 reampling samples was not possible at that time. So other methods had to be developed that could be computed during that time. One method was developed by William (W.S) Gossett, a Chemist who worked for Guinness as their head brewer. Gossett developed a distribution called the Student’s T-distribution. His process was to use the sample standard deviation, <em>s</em>, as an approximation of <span class="math inline">\(\sigma\)</span>. This means the test statistic is now <span class="math inline">\(t=\frac{x-\mu}{\frac{s}{\sqrt{n}}}\)</span>. This new test statistic is actually distributed as a Student’s t-distribution, developed by W.S. Gossett. There are some assumptions that must be made for this formula to be a Student’s t-distribution. These are outlined in the following theorem. Note: the t-distribution is called the Student’s t-distribution because that is the name he published under because he couldn’t publish under his own name due to employer not wanting him to publish under his own name. His employer by the way was Guinness and they didn’t want competitors knowing they had a chemist/statistician working for them. It is not called the Student’s t-distribution because it is only used by students.</p>
 <p>Theorem: If the following assumptions are met</p>
@@ -1004,12 +1004,12 @@ significance</li>
 <pre><code>## # A tibble: 6 × 76
 ##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1  
 ##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;  
-## 1 65075 2011_12  female    45 &quot; 40-49&quot;         NA White  
-## 2 58143 2009_10  male      22 &quot; 20-29&quot;        269 White  
-## 3 57181 2009_10  male      62 &quot; 60-69&quot;        745 White  
-## 4 66965 2011_12  male       2 &quot; 0-9&quot;           NA White  
-## 5 54468 2009_10  male      29 &quot; 20-29&quot;        352 White  
-## 6 58903 2009_10  female    17 &quot; 10-19&quot;        215 Mexican
+## 1 66568 2011_12  female    52 &quot; 50-59&quot;         NA White  
+## 2 58922 2009_10  male      56 &quot; 50-59&quot;        679 White  
+## 3 66957 2011_12  male      62 &quot; 60-69&quot;         NA White  
+## 4 67075 2011_12  female    14 &quot; 10-19&quot;         NA White  
+## 5 58950 2009_10  male       1 &quot; 0-9&quot;           16 White  
+## 6 58078 2009_10  male      20 &quot; 20-29&quot;        242 Mexican
 ## # … with 69 more variables: Race3 &lt;fct&gt;, Education &lt;fct&gt;,
 ## #   MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;,
 ## #   Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
@@ -1081,13 +1081,13 @@ Figure 7.4: Normal Quantile Plot of BMI from NHANES sample
 ##  One Sample t-test
 ## 
 ## data:  BMI
-## t = -1.6949, df = 47, p-value = 0.09671
+## t = -0.40547, df = 48, p-value = 0.6869
 ## alternative hypothesis: true mean is not equal to 27.2
 ## 95 percent confidence interval:
-##  23.79838 27.49078
+##  24.83714 28.76980
 ## sample estimates:
 ## mean of x 
-##  25.64458</code></pre>
+##  26.80347</code></pre>
 <p>The test statistic is the t in the output, the sample statistic is the mean of x in the output, and the p-value is the p-value is the output.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>Conclusion</li>

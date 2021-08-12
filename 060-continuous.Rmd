@@ -131,7 +131,10 @@ Approximately 99.7% of the data is within three standard deviations of the mean.
 
 **Image \#6.1: Empirical Rule**
 
-![Graph of Empirical Rule](Empirical_rule.png)
+```{r, include=FALSE, fig.alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations"}
+knitr::include_graphics("Empirical_rule.png")
+```
+
 
 Be careful, there is still some area left over in each end. Remember, the maximum a probability can be is 100%, so if you calculate you will see that for both ends together there is 0.3% of the curve. Because of
 symmetry, you can divide this equally between both ends and find that there is 0.15% in each tail beyond the 3rd standard deviations.

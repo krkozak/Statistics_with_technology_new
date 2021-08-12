@@ -1042,7 +1042,7 @@ Food and Agriculture Organization and World Bank population estimates.</p>
 <p>Since the Density data frame is for all countries, a new data frame must be created with just Su-Saharan Africa. This is created by using the following command</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="graphical-descriptions-of-data.html#cb50-1"></a>Africa &lt;-</span>
 <span id="cb50-2"><a href="graphical-descriptions-of-data.html#cb50-2"></a><span class="st">  </span>Density <span class="op">%&gt;%</span></span>
-<span id="cb50-3"><a href="graphical-descriptions-of-data.html#cb50-3"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(Region <span class="op">==</span><span class="st"> &quot;Sub-Saharan Africa&quot;</span>)</span>
+<span id="cb50-3"><a href="graphical-descriptions-of-data.html#cb50-3"></a><span class="st">  </span><span class="kw">filter</span>(Region <span class="op">==</span><span class="st"> &quot;Sub-Saharan Africa&quot;</span>)</span>
 <span id="cb50-4"><a href="graphical-descriptions-of-data.html#cb50-4"></a><span class="kw">head</span>(Africa)</span></code></pre></div>
 <pre><code>##               Country_Name Country_Code             Region
 ## 1                   Angola          AGO Sub-Saharan Africa
@@ -1244,12 +1244,12 @@ ordered pairs.</p>
 <pre><code>## # A tibble: 6 × 76
 ##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
 ##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;
-## 1 59527 2009_10  female    74 &quot; 70+&quot;          892 White
-## 2 59237 2009_10  male      55 &quot; 50-59&quot;        664 White
-## 3 56169 2009_10  female    12 &quot; 10-19&quot;        150 White
-## 4 60833 2009_10  male      52 &quot; 50-59&quot;        633 White
-## 5 59618 2009_10  female    71 &quot; 70+&quot;          858 White
-## 6 69683 2011_12  male       8 &quot; 0-9&quot;           NA Black
+## 1 69402 2011_12  female    59 &quot; 50-59&quot;         NA Other
+## 2 56248 2009_10  female    65 &quot; 60-69&quot;        781 Black
+## 3 62917 2011_12  male      13 &quot; 10-19&quot;         NA White
+## 4 52366 2009_10  male      49 &quot; 40-49&quot;        592 White
+## 5 62827 2011_12  female     0 &quot; 0-9&quot;            6 Other
+## 6 71218 2011_12  male      33 &quot; 30-39&quot;         NA White
 ## # … with 69 more variables: Race3 &lt;fct&gt;, Education &lt;fct&gt;,
 ## #   MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;,
 ## #   Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,

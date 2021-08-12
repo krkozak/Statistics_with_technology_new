@@ -35,7 +35,6 @@ You will need to turn on the package mosaic. The NHANES package contains a data 
 library("mosaicCore")
 library("mosaic")
 library("NHANES")
-library("dplyr")
 ```
 
 ```{r setup2a}
@@ -562,7 +561,7 @@ Since the Density data frame is for all countries, a new data frame must be crea
 ```{r africa-filtering, warning=FALSE}
 Africa <-
   Density %>%
-  dplyr::filter(Region == "Sub-Saharan Africa")
+  filter(Region == "Sub-Saharan Africa")
 head(Africa)
 ```
 

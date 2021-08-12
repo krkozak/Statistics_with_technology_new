@@ -4,6 +4,7 @@ language:
   ui:
     chapter_name: "Chapter "
 output_dir: "docs"
+fig_caption: yes
 rmd_files: ["index.Rmd",
             "010-basics.Rmd",
             "020-graphics.Rmd",

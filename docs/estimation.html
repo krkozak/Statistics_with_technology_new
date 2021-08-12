@@ -415,16 +415,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>One last thing to know about confidence is how the sample size and confidence level affect how wide the interval is. The following discussion demonstrates what happens to the width of the interval as you get more confident.</p>
 <p>Think about shooting an arrow into the target. Suppose you are really good at that and that you have a 90% chance of hitting the bull’s eye. Now the bull’s eye is very small. Since you hit the bull’s eye
 approximately 90% of the time, then you probably hit inside the next ring out 95% of the time. You have a better chance of doing this, but the circle is bigger. You probably have a 99% chance of hitting the target, but that is a much bigger circle to hit. You can see, as your confidence in hitting the target increases, the circle you hit gets bigger. The same is true for confidence intervals. This is demonstrated in figure #8.1.1.</p>
-<div class="figure">
-<img src="effect_confidence_level.png" alt="" />
-<p class="caption">figure of Affect of Confidence Level</p>
-</div>
 <p>The higher level of confidence makes a wider interval. There’s a trade off between width and confidence level. You can be really confident about your answer but your answer will not be very precise. Or you can have a precise answer (small margin of error) but not be very confident about your answer.</p>
 <p>Now look at how the sample size affects the size of the interval. Suppose figure #8.1.2 represents confidence intervals calculated on a 95% interval. A larger sample size from a representative sample makes the width of the interval narrower. This makes sense. Large samples are closer to the true population so the point estimate is pretty close to the true value.</p>
-<div class="figure">
-<img src="effect_sample_size.png" alt="" />
-<p class="caption">Figure of Affect of Sample Size</p>
-</div>
 <p>Now you know everything you need to know about confidence intervals except for the actual formula. The formula depends on which parameter you are trying to estimate. With different situations you will be given the confidence interval for that parameter.</p>
 </div>
 <div id="homework-19" class="section level3">
@@ -601,14 +593,14 @@ approximately 90% of the time, then you probably hit inside the next ring out 95
 <span id="cb360-2"><a href="estimation.html#cb360-2"></a><span class="st">  </span><span class="kw">sample_n</span>(NHANES, <span class="dt">size=</span><span class="dv">50</span>)</span>
 <span id="cb360-3"><a href="estimation.html#cb360-3"></a><span class="kw">head</span>(sample_NHANES_<span class="dv">50</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 76
-##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;
-## 1 54621 2009_10  female    16 &quot; 10-19&quot;        196 White
-## 2 52491 2009_10  male      16 &quot; 10-19&quot;        203 White
-## 3 53472 2009_10  female    50 &quot; 50-59&quot;        605 White
-## 4 70918 2011_12  female     7 &quot; 0-9&quot;           NA White
-## 5 59238 2009_10  male      21 &quot; 20-29&quot;        260 Black
-## 6 57428 2009_10  female    12 &quot; 10-19&quot;        155 White
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;   
+## 1 57424 2009_10  female    30 &quot; 30-39&quot;        369 Hispanic
+## 2 66575 2011_12  male      38 &quot; 30-39&quot;         NA White   
+## 3 66568 2011_12  female    52 &quot; 50-59&quot;         NA White   
+## 4 60971 2009_10  male      64 &quot; 60-69&quot;        778 White   
+## 5 57775 2009_10  female    80  &lt;NA&gt;            NA White   
+## 6 63082 2011_12  female    59 &quot; 50-59&quot;         NA White   
 ## # … with 69 more variables: Race3 &lt;fct&gt;, Education &lt;fct&gt;,
 ## #   MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;,
 ## #   Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
@@ -674,13 +666,13 @@ Figure 8.2: Normal Quantile Plot of BMI from NHANES sample
 ##  One Sample t-test
 ## 
 ## data:  BMI
-## t = 27.068, df = 48, p-value &lt; 2.2e-16
+## t = 28.016, df = 47, p-value &lt; 2.2e-16
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  24.83197 28.81701
+##  24.65709 28.47208
 ## sample estimates:
 ## mean of x 
-##  26.82449</code></pre>
+##  26.56458</code></pre>
 <p>The sample statistic is the mean of x in the output, and confidence interval is under the words 95 percent confidence interval.</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Statistical Interpretation: You are 95% confident that <span class="math inline">\(24.87190&lt;\mu&lt;28.71422\)</span> contains the mean BMI of Americans.</p></li>
@@ -1195,9 +1187,9 @@ NISER 081107 ID Data. (n.d.). Retrieved July 18, 2019, from <a href="http://wiki
 ## x purrr::cross()             masks mosaic::cross()
 ## x mosaic::do()               masks dplyr::do()
 ## x tidyr::expand()            masks Matrix::expand()
-## x stats::filter()            masks dplyr::filter()
+## x dplyr::filter()            masks stats::filter()
 ## x ggstance::geom_errorbarh() masks ggplot2::geom_errorbarh()
-## x stats::lag()               masks dplyr::lag()
+## x dplyr::lag()               masks stats::lag()
 ## x tidyr::pack()              masks Matrix::pack()
 ## x MASS::select()             masks dplyr::select()
 ## x mosaic::stat()             masks ggplot2::stat()

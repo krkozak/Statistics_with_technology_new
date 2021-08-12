@@ -120,7 +120,7 @@
 \makeatother
 \subtitle{Third Edition}
 \author{Kathryn Kozak}
-\date{2020-08-13}
+\date{2021-08-11}
 
 \begin{document}
 \maketitle
@@ -151,11 +151,11 @@ I hope you find this book useful in teaching statistics. When writing this book,
   Use assessments to improve and evaluate student learning
 \end{itemize}
 
-To this end, I ask students to interpret the results of their calculations. I incorporated the use of technology (R Studio) for most calculations. Because of that you will not find me using any of the computational formulas for standard deviations or correlation and regression since I prefer students understand the concept of these quantities. Also, because I utilize technology you will not find the standard normal table, Student's t-table, binomial table, chi-square distribution table, and F-distribution table in the book. Another difference between this book and other statistics books is the order of hypothesis testing and confidence intervals. Most books present confidence intervals first and then hypothesis tests. I find that presenting hypothesis testing first and then confidence intervals is more understandable for students. Lastly, I have de-emphasized the use of the z-test. In fact, I only use it to introduce hypothesis testing, and never utilize it again. Two samples should be emphasised over one sample test. Lastly, to aid student understanding and interest, most of the homework and examples utilize real data with multiple variables. The beauty of multiple variables, is that you can ask the students to investigate different analysis with different variables. This way students can work with data and come up with connections of asking questions and using data to answer the questions. Again, I hope you find this book useful for your introductory statistics class.
+To this end, I ask students to interpret the results of their calculations. I incorporated the use of technology (RStudio) for most calculations. Because of that you will not find me using any of the computational formulas for standard deviations or correlation and regression since I prefer students understand the concept of these quantities. Also, because I utilize technology you will not find the standard normal table, Student's t-table, binomial table, chi-square distribution table, and F-distribution table in the book. Another difference between this book and other statistics books is the order of hypothesis testing and confidence intervals. Most books present confidence intervals first and then hypothesis tests. I find that presenting hypothesis testing first and then confidence intervals is more understandable for students. Lastly, I have de-emphasized the use of the z-test. In fact, I only use it to introduce hypothesis testing, and never utilize it again. Two samples should be emphasized over one sample test. Lastly, to aid student understanding and interest, most of the homework and examples utilize real data with multiple variables. The beauty of multiple variables, is that you can ask the students to investigate different analysis with different variables. This way students can work with data and come up with connections of asking questions and using data to answer the questions. Again, I hope you find this book useful for your introductory statistics class.
 
-I want to make a comment about the mathematical knowledge that I assumed the students possess. The course for which I wrote this book has a higher prerequisite than most introductory statistics books. However, I do feel that students can read and understand this book as long as they can read critically. I do not show how to create most of the graphs, but all graphs are created with R Studio. So I hope the mathematical level is appropriate for your course.
+I want to make a comment about the mathematical knowledge that I assumed the students possess. The course for which I wrote this book has a higher prerequisite than most introductory statistics books. However, I do feel that students can read and understand this book as long as they can read critically. I do not show how to create most of the graphs, but all graphs are created with RStudio. So I hope the mathematical level is appropriate for your course.
 
-The technology that I utilized for creating the graphs and statistical analysis is R Studio. This is a statistical software that are used by statisticians and so using it gives students skills they may need in the future. Please feel free to use any other technology that is more appropriate for your students. Do make sure that you use some technology.
+The technology that I utilized for creating the graphs and statistical analysis is RStudio. This is a statistical software that are used by statisticians and so using it gives students skills they may need in the future. Please feel free to use any other technology that is more appropriate for your students. Do make sure that you use some technology.
 
 \hypertarget{acknowledgments}{%
 \section{Acknowledgments:}\label{acknowledgments}}
@@ -188,18 +188,30 @@ I would like to thank the following people for taking their valuable time to rev
   Students of Tacoma Community College
 \end{itemize}
 
-I also want to thank Coconino Community College for granting me a sabbatical so that I would have the time to write the book. On a personal note, I wanted to thank my brother, John Matic, his wife Jenelle, and their children Hannah and Eli for their hospitality when writing the first edition. In addition to allowing my family access to their home, John provided numerous examples and data sets for business applications in this book. I inadvertently left this thank you out of the first edition of the book, and for that I apologize. His help and his family's hospitality were invaluable to me.
+I also want to thank Coconino Community College for granting me a sabbatical so that I would have the time to write the book. Thank you to the StatPREP grant for providing me with the knowledge of new advancements in statisical thinking.
+
+On a personal note, I wanted to thank my brother, John Matic, his wife Jenelle, and their children Hannah and Eli for their hospitality when writing the first edition. In addition to allowing my family access to their home, John provided numerous examples and data sets for business applications in this book. I inadvertently left this thank you out of the first edition of the book, and for that I apologize. His help and his family's hospitality were invaluable to me.
+
 Lastly, I want to thank my husband Rich and my son Dylan for supporting me in this project. Without their love and support, I would not have been able to complete the book.
 
 \hypertarget{new-to-the-third-edition}{%
 \section{New to the Third Edition:}\label{new-to-the-third-edition}}
 
-The additions to this edition mostly involve adding the commands to create graphs, compute descriptive statistics, finding probabilities, and computing inferential analysis using the open source software R Studio, and the removal of all other technologies. Data Frames with multiple variables and multiple units of measurements were expanded to most of the data. This is to make the course more data-centric. Lastly, minor explanations were made and corrections were made where necessary.
+The additions to this edition mostly involve adding the commands to create graphs, compute descriptive statistics, finding probabilities, and computing inferential analysis using the open source software RStudio, and the removal of all other technologies. Data Frames with multiple variables and multiple units of measurements were expanded to most of the data. This is to make the course more data-centric. Lastly, minor explanations were made and corrections were made where necessary.
 
-\hypertarget{packages-needed-for-r-studio}{%
-\section{Packages needed for R Studio:}\label{packages-needed-for-r-studio}}
+\hypertarget{packages-needed-for-rstudio}{%
+\section{Packages needed for RStudio:}\label{packages-needed-for-rstudio}}
 
-You will need the following packages installed and loaded in R Studio: arm, mosaic, MASS, Weighted.Desc.Stat.
+You will need the following packages installed and loaded in RStudio: arm, mosaic, MASS, Weighted.Desc.Stat.
+
+\hypertarget{creative-commons-license}{%
+\section{Creative commons license:}\label{creative-commons-license}}
+
+Creative Commons Attribution Sharealike.
+
+2020 Kathryn Kozak
+
+ISBN: 978-0-359-84204-9
 
 \hypertarget{statistical-basics}{%
 \chapter{Statistical Basics}\label{statistical-basics}}
@@ -583,18 +595,18 @@ You want to take a simple random sample of size 1000 from a data frame known as 
 
 \begin{verbatim}
 ## # A tibble: 1,000 x 77
-##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-##  1 63659 2011_12  male      80  <NA>            NA White
-##  2 55721 2009_10  male      60 " 60-69"        730 White
-##  3 59185 2009_10  male      78 " 70+"          940 White
-##  4 55068 2009_10  female    17 " 10-19"        208 White
-##  5 63832 2011_12  male      46 " 40-49"         NA White
-##  6 55334 2009_10  female     0 " 0-9"           11 White
-##  7 66474 2011_12  female    43 " 40-49"         NA White
-##  8 60232 2009_10  male      80  <NA>            NA White
-##  9 59798 2009_10  female     7 " 0-9"           91 White
-## 10 62662 2011_12  female    11 " 10-19"         NA Mexi~
+##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>   
+##  1 62076 2009_10  female    60 " 60-69"        727 Black   
+##  2 68253 2011_12  female     8 " 0-9"           NA White   
+##  3 64985 2011_12  male      65 " 60-69"         NA Black   
+##  4 70090 2011_12  female     7 " 0-9"           NA White   
+##  5 70703 2011_12  female    57 " 50-59"         NA White   
+##  6 68635 2011_12  female    58 " 50-59"         NA Other   
+##  7 67834 2011_12  female    33 " 30-39"         NA White   
+##  8 62724 2011_12  female    57 " 50-59"         NA White   
+##  9 67619 2011_12  male      53 " 50-59"         NA White   
+## 10 57575 2009_10  female    13 " 10-19"        166 Hispanic
 ## # ... with 990 more rows, and 70 more variables:
 ## #   Race3 <fct>, Education <fct>, MaritalStatus <fct>,
 ## #   HHIncome <fct>, HHIncomeMid <int>, Poverty <dbl>,
@@ -1098,10 +1110,10 @@ population, so you have to take a sample. Thus, you collect data either through 
 
 This chapter will focus mostly on using the graphs to understand aspects of the data, and not as much on how to create the graphs. There is technology that will create most of the graphs, though it is important for you to understand the basics of how to create them.
 
-This textbook uses R Studio to perform all graphical and descriptive statistics, and all statistical inference. When using R Studio, every command is performed the same way. You start off with a
+This textbook uses RStudio to perform all graphical and descriptive statistics, and all statistical inference. When using RStudio, every command is performed the same way. You start off with a
 goal(explanatory variable \textasciitilde{} response variable, data=data frame\_name,\ldots)
 
-R Studio uses packages to make calculations easier. For this textbook, you will mostly need the package mosaic. There will be others that you will need on occasion, but you will be told that at the time. Most likely, mosaic is already installed in your R Studio. If you wish to install other packages you use the command
+RStudio uses packages to make calculations easier. For this textbook, you will mostly need the package mosaic. There will be others that you will need on occasion, but you will be told that at the time. Most likely, mosaic is already installed in your RStudio. If you wish to install other packages you use the command
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1111,7 +1123,7 @@ R Studio uses packages to make calculations easier. For this textbook, you will 
 
 where you replace the name of package with the package you wish to install.
 
-Once the package is installed, then you will need to tell R Studio you want to use it every time you start R Studio. The command to tell R Studio you want to use a package is
+Once the package is installed, then you will need to tell RStudio you want to use it every time you start RStudio. The command to tell RStudio you want to use a package is
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1123,9 +1135,9 @@ You will need to turn on the package mosaic. The NHANES package contains a data 
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(}\StringTok{"mosaicCore"}\NormalTok{)}
 \KeywordTok{library}\NormalTok{(}\StringTok{"mosaic"}\NormalTok{)}
 \KeywordTok{library}\NormalTok{(}\StringTok{"NHANES"}\NormalTok{)}
-\KeywordTok{library}\NormalTok{(}\StringTok{"StatsUsingTechnologyData"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1158,7 +1170,7 @@ You will see more on what the different commands are that you would use. A word 
 \hypertarget{qualitative-data}{%
 \section{Qualitative Data}\label{qualitative-data}}
 
-Remember, qualitative data are words describing a characteristic of the individual. There are several different graphs that are used for qualitative data. These graphs include bar graphs, Pareto charts, and pie charts. Bar graphs can be created using a statistical program like R Studio.
+Remember, qualitative data are words describing a characteristic of the individual. There are several different graphs that are used for qualitative data. These graphs include bar graphs, Pareto charts, and pie charts. Bar graphs can be created using a statistical program like RStudio.
 
 \textbf{Bar graphs or charts} consist of the frequencies on one axis and the categories on the other axis. Drawing the bar graph using R is performed using the following command.
 
@@ -1250,7 +1262,7 @@ Kozak K (2019). Survey results form surveys collected in statistics class at Coc
 
 Kozak, 2019
 
-Create a bar graph of vehicle type. To do this in R Studio, use the command
+Create a bar graph of vehicle type. To do this in RStudio, use the command
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1270,9 +1282,7 @@ where gf\_bar is the goal, vehicle is the name of the response variable (there i
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/class-data-bar-1.pdf}
-\caption{\label{fig:class-data-bar}Bar Graph for Type of Car Data}
+\includegraphics{Statistics_using_technology_files/figure-latex/class-data-bar-1} \caption{Bar Graph for Type of Car Data}\label{fig:class-data-bar}
 \end{figure}
 
 Notice from the graph (Figure \ref{fig:class-data-bar}), you can see that Chevrolet and Ford are the more popular car, with Jeep, Subaru, and Toyota not far behind. Many types seems to be the lesser used, and tied for last place. However, more data would help to figure this out.
@@ -1283,7 +1293,7 @@ Notice from the graph (Figure \ref{fig:class-data-bar}), you can see that Chevro
   All graphs should have labels on each axis and a title for the graph.*
 \end{itemize}
 
-The beauty of data frames with multiple variables is that you can answer many questions from the data. Suppose you want to see if gender makes a difference for the type of car a person drives. If you are a car manufacturer, if you knew that certain genders like certain cars, then you would advertise to the different genders. To create a bar graph that separates based on gender, perform the following command in R Studio.
+The beauty of data frames with multiple variables is that you can answer many questions from the data. Suppose you want to see if gender makes a difference for the type of car a person drives. If you are a car manufacturer, if you knew that certain genders like certain cars, then you would advertise to the different genders. To create a bar graph that separates based on gender, perform the following command in RStudio.
 
 
 
@@ -1295,9 +1305,7 @@ The beauty of data frames with multiple variables is that you can answer many qu
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/class-data-bar-gender-1.pdf}
-\caption{\label{fig:class-data-bar-gender}Bar Graph for Type of Car Data}
+\includegraphics{Statistics_using_technology_files/figure-latex/class-data-bar-gender-1} \caption{Bar Graph for Type of Car Data}\label{fig:class-data-bar-gender}
 \end{figure}
 
 Notice a Ford is driven by females more than any other car, while Chevrolet, Mercury, and Subaru cars are equally driven by males. Obviously a larger sample would be needed to make any conclusions from this data.
@@ -1314,16 +1322,14 @@ There are other types of graphs that can be created for quantitative variables. 
 \end{Shaded}
 
 \begin{verbatim}
-## `stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 \end{verbatim}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/class-data-dot-gender-1.pdf}
-\caption{\label{fig:class-data-dot-gender}Dot Plot for Type of Car Data}
+\includegraphics{Statistics_using_technology_files/figure-latex/class-data-dot-gender-1} \caption{Dot Plot for Type of Car Data}\label{fig:class-data-dot-gender}
 \end{figure}
 
-Notice a dot plot is like a bar chart. Both give you the same information. You can also divide a dot plot by gender. Another type of graph that is also useful and similar to the dot plot is a point plot (scatter plot). In this plot (Figure \ref{fig:car-data-gender}) you can graph the explanatory variable versus the response variable. The command for this in R Studio is as follows.
+Notice a dot plot is like a bar chart. Both give you the same information. You can also divide a dot plot by gender. Another type of graph that is also useful and similar to the dot plot is a point plot (scatter plot). In this plot (Figure \ref{fig:car-data-gender}) you can graph the explanatory variable versus the response variable. The command for this in RStudio is as follows.
 
 
 
@@ -1335,9 +1341,7 @@ Notice a dot plot is like a bar chart. Both give you the same information. You c
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/car-data-gender-1.pdf}
-\caption{\label{fig:car-data-gender}Point plot for Type of Car Data versus gender}
+\includegraphics{Statistics_using_technology_files/figure-latex/car-data-gender-1} \caption{Point plot for Type of Car Data versus gender}\label{fig:car-data-gender}
 \end{figure}
 
 The problem with this graph (Figure \ref{fig:car-data-gender}) is that if there are multiple females who drive a Ford, only one dot is shown. So it is best to spread the dots out using a plot known as a jitter plot. In a jitter plot the dots are randomly moved off the center line. The command for a jitter plot is as follows:
@@ -1352,9 +1356,7 @@ The problem with this graph (Figure \ref{fig:car-data-gender}) is that if there 
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/car-data-gender-jitter-1.pdf}
-\caption{\label{fig:car-data-gender-jitter}Jitter plot for Type of Car Data versus gender}
+\includegraphics{Statistics_using_technology_files/figure-latex/car-data-gender-jitter-1} \caption{Jitter plot for Type of Car Data versus gender}\label{fig:car-data-gender-jitter}
 \end{figure}
 
 Now you can see (Figure \ref{fig:car-data-gender-jitter}) that there are 4 females who drive a Ford. There is one female who drives a Honda. Other information about other cars and genders can be seen better than in the point plot and the bar graph. Jitter plots are useful to see how many data values are for each qualitative data values.
@@ -1627,7 +1629,7 @@ John Matic (2013)
 ## #   SexOrientation <fct>, PregnantNow <fct>
 \end{verbatim}
 
-To view the code book for NHANES, type help(``NHANES'') in R Studio after you load the NHANES packages using library(``NHANES'')
+To view the code book for NHANES, type help(``NHANES'') in RStudio after you load the NHANES packages using library(``NHANES'')
 
 \emph{\\
 }
@@ -1637,7 +1639,7 @@ To view the code book for NHANES, type help(``NHANES'') in R Studio after you lo
 
 There are several different graphs for quantitative data. With quantitative data, you can talk about how the data is distributed, called a distribution. The shape of the distribution can be described from the graphs.
 
-\textbf{Histogram}: a graph of frequencies (counts) on the vertical axis and classes on the horizontal axis. The height of the rectangles is the frequency and the width is the class width. The width depends on how many classes (bins) are in the histogram. The shape of a histogram is dependent on the number of bins. In R Studio the command to create a histogram is
+\textbf{Histogram}: a graph of frequencies (counts) on the vertical axis and classes on the horizontal axis. The height of the rectangles is the frequency and the width is the class width. The width depends on how many classes (bins) are in the histogram. The shape of a histogram is dependent on the number of bins. In RStudio the command to create a histogram is
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1648,7 +1650,7 @@ There are several different graphs for quantitative data. With quantitative data
 
 The last part of the command puts a title on the graph. You type in what ever you want for the title in the quotes.
 
-\textbf{Density Plot}: Similar to a histogram, except smoothing is created to smooth out the graph. The shape is not dependent on the number of bins so the distribution is easier to determine from the density plot. In R Studio the command to create a density plot is
+\textbf{Density Plot}: Similar to a histogram, except smoothing is created to smooth out the graph. The shape is not dependent on the number of bins so the distribution is easier to determine from the density plot. In RStudio the command to create a density plot is
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1658,7 +1660,7 @@ The last part of the command puts a title on the graph. You type in what ever yo
 
 The last part of the command puts a title on the graph. You type in what every you want for the title in the quotes.
 
-\textbf{Dot Plot}: Dot plots can be created for both quantitative and qualitative variables. For smaller data frames, a dot plot can be useful to determine the shape of the distribution. The command in R Studio is
+\textbf{Dot Plot}: Dot plots can be created for both quantitative and qualitative variables. For smaller data frames, a dot plot can be useful to determine the shape of the distribution. The command in RStudio is
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1718,49 +1720,40 @@ Draw a histogram, density plot, and a dot plot for the variable the distance a s
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_histogram}\NormalTok{(}\OperatorTok{~}\NormalTok{distance_campus, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{title=}\StringTok{"Distance in miles }
-\StringTok{             from the Lone Tree Campus"}\NormalTok{)}
+\KeywordTok{gf_histogram}\NormalTok{(}\OperatorTok{~}\NormalTok{distance_campus, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{title=}\StringTok{"Distance in miles from the Lone Tree Campus"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/distance-campus-hist-cap-1.pdf}
-\caption{\label{fig:distance-campus-hist-cap}Histogram of Distance a Student Lives from the Lone Tree Campus}
+\includegraphics{Statistics_using_technology_files/figure-latex/distance-campus-hist-cap-1} \caption{Histogram of Distance a Student Lives from the Lone Tree Campus}\label{fig:distance-campus-hist-cap}
 \end{figure}
 
 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{distance_campus, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{title=}\StringTok{"Distance in miles }
-\StringTok{           from the Lone Tree Campus"}\NormalTok{)}
+\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{distance_campus, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{title=}\StringTok{"Distance in miles from the Lone Tree Campus"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/distance-campus-density-1.pdf}
-\caption{\label{fig:distance-campus-density}Density plot of Distance a Student Lives from the Lone Tree Campus}
+\includegraphics{Statistics_using_technology_files/figure-latex/distance-campus-density-1} \caption{Density plot of Distance a Student Lives from the Lone Tree Campus}\label{fig:distance-campus-density}
 \end{figure}
 
 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_dotplot}\NormalTok{(}\OperatorTok{~}\NormalTok{distance_campus, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{title=}\StringTok{"Distance in miles }
-\StringTok{           from the Lone Tree Campus"}\NormalTok{)}
+\KeywordTok{gf_dotplot}\NormalTok{(}\OperatorTok{~}\NormalTok{distance_campus, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{title=}\StringTok{"Distance in miles from the Lone Tree Campus"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## `stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 \end{verbatim}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/distance-campus-dot-1.pdf}
-\caption{\label{fig:distance-campus-dot}Dot Plot of Distance a Student Lives from the Lone Tree Campus}
+\includegraphics{Statistics_using_technology_files/figure-latex/distance-campus-dot-1} \caption{Dot Plot of Distance a Student Lives from the Lone Tree Campus}\label{fig:distance-campus-dot}
 \end{figure}
 
 Notice the histogram, density plot, and dot plot are all very similar, but the density plot is smother. They all tell you similar ideas of the shape of the distribution. Reviewing the graphs you can see that most of the students live within 10 miles of the Lone Tree Campus, in fact most live within 5 miles from the campus. However, there is a student who lives around 50 miles from the Lone Tree Campus. This is a great deal farther from the rest of the data. This value could be considered an outlier. An \textbf{outlier} is a data value that is far from the rest of the values. It may be an unusual value or a mistake. It is a data value that should be investigated. In this case, the student lived really far from campus, thus the value is not a mistake, and is just very unusual. The density plot is probably the best plot for most data frames.
@@ -1913,9 +1906,7 @@ Chronicle of Higher Education *, December 31, 2018.
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/tuition-instate-1.pdf}
-\caption{\label{fig:tuition-instate}Density Plot for Instate Tuition Levels at all Four-Year Colleges**}
+\includegraphics{Statistics_using_technology_files/figure-latex/tuition-instate-1} \caption{Density Plot for Instate Tuition Levels at all Four-Year Colleges**}\label{fig:tuition-instate}
 \end{figure}
 
 
@@ -1928,9 +1919,7 @@ Chronicle of Higher Education *, December 31, 2018.
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/tuition-instate-type-1.pdf}
-\caption{\label{fig:tuition-instate-type}Density Plot for Instate Tuition Levels at all Four-Year Colleges**}
+\includegraphics{Statistics_using_technology_files/figure-latex/tuition-instate-type-1} \caption{Density Plot for Instate Tuition Levels at all Four-Year Colleges**}\label{fig:tuition-instate-type}
 \end{figure}
 
 The distribution is skewed right, with no gaps. Most institutions in state is less than \$ 20,000 per year though some go as high as \$ 60,00 per year. When separated by public versus private and for profit, most public are much less than \$ 20,000 per year while private four year cost around \$ 30,000 per year, and for profit are around \$ 20,000 per year.
@@ -2151,9 +2140,9 @@ Since the Density data frame is for all countries, a new data frame must be crea
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{Africa<-}
-\StringTok{  }\NormalTok{Density}\OperatorTok{%>%}
-\KeywordTok{filter}\NormalTok{(Region}\OperatorTok{==}\StringTok{"Sub-Saharan Africa"}\NormalTok{)}
+\NormalTok{Africa <-}
+\StringTok{  }\NormalTok{Density }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(Region }\OperatorTok{==}\StringTok{ "Sub-Saharan Africa"}\NormalTok{)}
 \KeywordTok{head}\NormalTok{(Africa)}
 \end{Highlighting}
 \end{Shaded}
@@ -2412,9 +2401,9 @@ Sometimes you have two different variables and you want to see if they are relat
 ordered pairs.
 
 \hypertarget{example-scatter-plot}{%
-\subsection{Example: Scatter Plot**}\label{example-scatter-plot}}
+\subsection{\texorpdfstring{Example: \textbf{Scatter Plot}}{Example: Scatter Plot}}\label{example-scatter-plot}}
 
-Is there a relationship between systolic blood pressure and weight? To answer this question some data is needed. The data frame NHANES contains this data, but given the size of the data frame, it may be not be very useful to look at the graph of all the data. It makes sense to take a sample form the data frame. A random sample is the better type of sample to take. Once the sample is taken, then a scatter plot can be created. The R studio command for a scatter plot is
+Is there a relationship between systolic blood pressure and weight? To answer this question some data is needed. The data frame NHANES contains this data, but given the size of the data frame, it may be not be very useful to look at the graph of all the data. It makes sense to take a sample from the data frame. A random sample is the better type of sample to take. Once the sample is taken, then a scatter plot can be created. The RStudio command for a scatter plot is
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2439,12 +2428,12 @@ Is there a relationship between systolic blood pressure and weight? To answer th
 ## # A tibble: 6 x 76
 ##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
 ##   <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-## 1 63223 2011_12  male      59 " 50-59"         NA White
-## 2 66721 2011_12  female    47 " 40-49"         NA Other
-## 3 70807 2011_12  female    22 " 20-29"         NA Mexi~
-## 4 52460 2009_10  female    10 " 10-19"        122 White
-## 5 62784 2011_12  male      31 " 30-39"         NA Hisp~
-## 6 63418 2011_12  female    40 " 40-49"         NA White
+## 1 54152 2009_10  male      64 " 60-69"        777 White
+## 2 60597 2009_10  male       9 " 0-9"          117 White
+## 3 67117 2011_12  female    25 " 20-29"         NA White
+## 4 60594 2009_10  male      20 " 20-29"        245 Other
+## 5 66699 2011_12  male      33 " 30-39"         NA White
+## 6 63215 2011_12  female    62 " 60-69"         NA Black
 ## # ... with 69 more variables: Race3 <fct>, Education <fct>,
 ## #   MaritalStatus <fct>, HHIncome <fct>, HHIncomeMid <int>,
 ## #   Poverty <dbl>, HomeRooms <int>, HomeOwn <fct>,
@@ -2486,9 +2475,7 @@ y=response variable = BPSys1
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/weight-bp-sys-data-1.pdf}
-\caption{\label{fig:weight-bp-sys-data}Scatter Plot of Blood Pressure versus Weight}
+\includegraphics{Statistics_using_technology_files/figure-latex/weight-bp-sys-data-1} \caption{Scatter Plot of Blood Pressure versus Weight}\label{fig:weight-bp-sys-data}
 \end{figure}
 
 Looking at the graph, it appears that there is a linear relationship between weight and systolic blood pressure though it looks somewhat weak. It also appears to be a positive relationship, thus as weight increases, the systolic blood pressure increases.
@@ -2496,7 +2483,7 @@ Looking at the graph, it appears that there is a linear relationship between wei
 \textbf{Time-Series }
 
 A time-series plot is a graph showing the data measurements in chronological order, the data being quantitative data. For example, a time-series plot is used to show profits over the last 5 years. To
-create a time-series plot on R Studio, use the command
+create a time-series plot on RStudio, use the command
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2591,7 +2578,7 @@ This data frame contains the following columns:
 
 Date: quarters from September 1 1969 to March 1, 2019
 
-Day: The number of days since September 1, 1969 using 90 days between starts of a quarter. This column is to make it easier to graph in R Studio, and has no other purpose.
+Day: The number of days since September 1, 1969 using 90 days between starts of a quarter. This column is to make it easier to graph in RStudio, and has no other purpose.
 
 Assets\_RBA: The assets for the Royal Bank of Australia
 
@@ -2638,7 +2625,7 @@ Reserve Bank of Australia and other organizations
 \textbf{Solution:}
 variable, x=total assets of Authorized Deposit-taking Institutions (ADIs)
 
-Looking at the code book, one can see that the variable Assets\_ADIs\_Total is the variable in the data frame that is of interest here. With a time series plot, the other variable is time. In this case the variable in the data frame that represents time is Date. The problem with Date is that the units are every quarter. This is not easily interpreted by R Studio, so a column was created called Day. From the code book, this is the number of days since September 1, 1969 using 90 days between starts of a quarter. Even though this isn't perfect, it will work for determining trends. So create a time series plot of Assets\_ADIs\_Total versus Day. The command is:
+Looking at the code book, one can see that the variable Assets\_ADIs\_Total is the variable in the data frame that is of interest here. With a time series plot, the other variable is time. In this case the variable in the data frame that represents time is Date. The problem with Date is that the units are every quarter. This is not easily interpreted by RStudio, so a column was created called Day. From the code book, this is the number of days since September 1, 1969 using 90 days between starts of a quarter. Even though this isn't perfect, it will work for determining trends. So create a time series plot of Assets\_ADIs\_Total versus Day. The command is:
 
 
 
@@ -2649,9 +2636,7 @@ Looking at the code book, one can see that the variable Assets\_ADIs\_Total is t
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/Assets-1.pdf}
-\caption{\label{fig:Assets}Time-Series Graph of Total Assets of ADIs versus Time}
+\includegraphics{Statistics_using_technology_files/figure-latex/Assets-1} \caption{Time Series Graph}\label{fig:Assets}
 \end{figure}
 
 From the graph, total assets of Authorized Deposit-taking Institutions (ADIs) appear to be increasing with a slight dip around 14000 days since September 1, 1969. That would be around the year 2008 (14000 days /360 days per year + 1969).
@@ -3342,7 +3327,7 @@ Before starting any mathematics problem, it is always a good idea to define the 
 The variable is \emph{x} = weight of a cat
 
 Mean:
-To find with R Studio, perform the command:
+To find with RStudio, perform the command:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3351,14 +3336,14 @@ To find with R Studio, perform the command:
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_Bwt
-## 1 2.723611
+##   response     mean
+## 1      Bwt 2.723611
 \end{verbatim}
 
 The mean weight is 2.72 kg
 
 Median:
-To find with R Studio, perform the command:
+To find with RStudio, perform the command:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3367,8 +3352,8 @@ To find with R Studio, perform the command:
 \end{Shaded}
 
 \begin{verbatim}
-##   median_Bwt
-## 1        2.7
+##   response median
+## 1      Bwt    2.7
 \end{verbatim}
 
 The median weight is 2.7 kg also. It appears the average weight is 2.7 kg of all cats.
@@ -3399,7 +3384,7 @@ The output looks like:
 Suppose you want to know if male cats weight more than female cats. Looking at the variables, you notice that there is a variable for the sex of the cat. You can look at the weights of males and females separately. This looks like:
 
 \textbf{Solution:}
-To find the mean and median, separated by sex, use this command in R Studio:
+To find the mean and median, separated by sex, use this command in RStudio:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3408,9 +3393,9 @@ To find the mean and median, separated by sex, use this command in R Studio:
 \end{Shaded}
 
 \begin{verbatim}
-##   Sex mean_Bwt median_Bwt
-## 1   F 2.359574        2.3
-## 2   M 2.900000        2.9
+##   response Sex     mean median
+## 1      Bwt   F 2.359574    2.3
+## 2      Bwt   M 2.900000    2.9
 \end{verbatim}
 
 Notice that the female cats' mean weigh 2.4 kg and the male cats' mean weigh 2.9 kg The median weight of female cats is 2.3 kg and for males is is 2.9 kg So it does appear that males cats weight a bit more than the female cats.
@@ -3423,7 +3408,7 @@ There are many different summary statistics that can be found. An example is the
 Find the minimum and maximum values of cats weights.
 
 \textbf{Solution}
-The command in R Studio for finding the minimum and maximum is very similar to how to find the mean and median, In fact all summary statistics start with
+The command in RStudio for finding the minimum and maximum is very similar to how to find the mean and median, In fact all summary statistics start with
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3431,7 +3416,7 @@ The command in R Studio for finding the minimum and maximum is very similar to h
 \end{Highlighting}
 \end{Shaded}
 
-Here is the command in R Studio for the minimum and maximum of cat's body weight.
+Here is the command in RStudio for the minimum and maximum of cat's body weight.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3440,8 +3425,8 @@ Here is the command in R Studio for the minimum and maximum of cat's body weight
 \end{Shaded}
 
 \begin{verbatim}
-##   min_Bwt max_Bwt
-## 1       2     3.9
+##   response min max
+## 1      Bwt   2 3.9
 \end{verbatim}
 
 The minimum weight of a cat in this data frame is 2 kg and the maximum weight of a cat is 3.9 kg.
@@ -3450,7 +3435,7 @@ Now create two new data sets. One data set will exclude the maximum value. You c
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{nomax<-}\KeywordTok{filter}\NormalTok{(cats, Bwt}\OperatorTok{<}\FloatTok{3.9}\NormalTok{)}
+\NormalTok{nomax <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(cats, Bwt}\OperatorTok{<}\FloatTok{3.9}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -3471,8 +3456,8 @@ The \textless- is the way to indicate to R what the data set nomin is equivalent
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_Bwt median_Bwt
-## 1 2.707042        2.7
+##   response     mean median
+## 1      Bwt 2.707042    2.7
 \end{verbatim}
 
 The mean without the maximum value is 2.70 kg, and the median is 2.7 kg.
@@ -3484,8 +3469,8 @@ The mean without the maximum value is 2.70 kg, and the median is 2.7 kg.
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_Bwt median_Bwt
-## 1  2.74964        2.7
+##   response    mean median
+## 1      Bwt 2.74964    2.7
 \end{verbatim}
 
 The mean without the minimum value is 2.75 kg, and the median is 2.7 kg.
@@ -3504,12 +3489,6 @@ To understand how the different measures of center related to skewed or symmetri
 
 \textbf{Graph \#3.1.2: Mean, Median, Mode as Related to a Distribution}
 
-\begin{figure}
-\centering
-\includegraphics{centers_distribution.png}
-\caption{Graphs of symmetric, skewed right and skewed left}
-\end{figure}
-
 One last type of average is a weighted average. \textbf{Weighted averages} are used quite often in different situations. Some teachers use them in calculating a student's grade in the course, or a grade on a project. Some employers use them in employee evaluations. The idea is that some activities are more
 important than others. As an example, a full time teacher at a community college may be evaluated on their service to the college, their service to the community, whether their paperwork is turned in on time, and their teaching. However, teaching is much more important than whether their paperwork is turned in on time. When the evaluation is completed, more weight needs to be given to the teaching and less to the paperwork. This is a weighted average.
 
@@ -3527,7 +3506,7 @@ In your biology class, your final grade is based on several things: a lab score,
 
 Variable: \emph{x} = score
 
-A weighted average can be found using technology. The commands for finding the weighted mean using R Studio is as follows:
+A weighted average can be found using technology. The commands for finding the weighted mean using RStudio is as follows:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3631,8 +3610,8 @@ Median can be found on ordinal, interval, and ratio data, since you need to put 
 
 Mean can be found on interval and ratio data, since you must have numbers to add together.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-3}{%
+\subsection{Homework}\label{homework-3}}
 
 ** Use Technology on all problems. State the variable on all problems.**
 
@@ -3862,12 +3841,6 @@ John Matic (2013)
 
 \textbf{Graph \#3.1.1: Skewed or Symmetric Graph}
 
-\begin{figure}
-\centering
-\includegraphics{graph_3_1_1.png}
-\caption{Graphs of symmetric, skewed right and skewed left}
-\end{figure}
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{5}
@@ -3877,12 +3850,6 @@ John Matic (2013)
 \end{enumerate}
 
 \textbf{Graph \#3.1.2: Skewed or Symmetric Graph}
-
-\begin{figure}
-\centering
-\includegraphics{graph_3_1_2.png}
-\caption{Graphs of symmetric, skewed right and skewed left}
-\end{figure}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3932,7 +3899,7 @@ The \textbf{population variance} formula:
 The \textbf{population standard deviation} formula:
 \(\sigma =\sqrt{ \frac{\sum\left(x-\mu \right)^2}{N}}\)
 
-Both the sample variance and sample standard deviation can be found using technology. If using R Studio, you would use
+Both the sample variance and sample standard deviation can be found using technology. If using RStudio, you would use
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3957,8 +3924,8 @@ The variance and standard deviation for all cats is found by performing the comm
 \end{Shaded}
 
 \begin{verbatim}
-##     var_Bwt    sd_Bwt
-## 1 0.2355225 0.4853066
+##   response       var        sd
+## 1      Bwt 0.2355225 0.4853066
 \end{verbatim}
 
 The variance for all cats is 0.24 \(kg^2\) and the standard deviation is 0.49 kg.
@@ -3972,9 +3939,9 @@ To find out the mean, variance, and standard deviation for each sex of the cats,
 \end{Shaded}
 
 \begin{verbatim}
-##   Sex mean_Bwt    var_Bwt    sd_Bwt
-## 1   F 2.359574 0.07506938 0.2739879
-## 2   M 2.900000 0.21854167 0.4674844
+##   response Sex     mean        var        sd
+## 1      Bwt   F 2.359574 0.07506938 0.2739879
+## 2      Bwt   M 2.900000 0.21854167 0.4674844
 \end{verbatim}
 
 You can see that the mean weight of females cats is 2.36 kg, the variance is 0.075 \(kg^2\), and the standard deviation is 0.27 kg. For males cats, the mean is 2.9 kg, the variance is 0.22 \(kg^2\), and the standard deviation is 0.47 kg. This means that female cats weigh less than males and since the variance and standard deviations are much less for female cats than males cats, female cats' weights are more consistent than male cats.
@@ -4056,8 +4023,8 @@ Find the mean and standard deviation:
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_Annual sd_Annual
-## 1    56.02899  27.56061
+##   response     mean       sd
+## 1   Annual 56.02899 27.56061
 \end{verbatim}
 
 The mean is \(\mu=56\) tornadoes and the standard deviation is \(\sigma=27.6\) tornadoes. The interval will be \(\mu\pm2*\sigma=56\pm2*27.6=(0.8,111.2)\)
@@ -4106,8 +4073,8 @@ For this question the \emph{x} = 145, \(z=\frac{145-56}{27.6}=3.22\)
 
 Since this value is more than 2, then it is unusual to have only 145 tornadoes in a year in Oklahoma.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-4}{%
+\subsection{Homework}\label{homework-4}}
 
 \textbf{Use Technology on all problems. State the variable on all problems.}
 
@@ -4479,7 +4446,7 @@ There are special percentiles called \textbf{quartiles}. Quartiles are numbers t
 
 \textbf{To find the quartiles:}
 
-The command in R Studio is
+The command in RStudio is
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4531,7 +4498,7 @@ Find the five-number summary, the interquartile range (\emph{IQR}), and draw a b
 \textbf{Solution:}
 
 Variable: \emph{x} = weight of cats
-To compute the five-number summary on R Studio, use the command:
+To compute the five-number summary on RStudio, use the command:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4540,8 +4507,8 @@ To compute the five-number summary on R Studio, use the command:
 \end{Shaded}
 
 \begin{verbatim}
-##   Min. 1st Qu. Median     Mean 3rd Qu. Max.
-## 1    2     2.3    2.7 2.723611   3.025  3.9
+##   response Min. 1st Qu. Median     Mean 3rd Qu. Max.
+## 1      Bwt    2     2.3    2.7 2.723611   3.025  3.9
 \end{verbatim}
 
 Not R Studo also calculates the mea as part of the summary command, but the five-number summary is jus the five numbers:
@@ -4573,9 +4540,7 @@ This is a modified boxplot which shows the outliers in the data.
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/cats1-data-box-1.pdf}
-\caption{\label{fig:cats1-data-box}Box Plot of Weights of Cats}
+\includegraphics{Statistics_using_technology_files/figure-latex/cats1-data-box-1} \caption{Box Plot of Weights of Cats}\label{fig:cats1-data-box}
 \end{figure}
 
 There are no outliers since there are no dots outside of the fences.
@@ -4600,9 +4565,9 @@ To find the five-number summary separated based on gender use the following comm
 \end{Shaded}
 
 \begin{verbatim}
-##   Sex Min. 1st Qu. Median     Mean 3rd Qu. Max.
-## 1   F    2    2.15    2.3 2.359574     2.5  3.0
-## 2   M    2    2.50    2.9 2.900000     3.2  3.9
+##   response Sex Min. 1st Qu. Median     Mean 3rd Qu. Max.
+## 1      Bwt   F    2    2.15    2.3 2.359574     2.5  3.0
+## 2      Bwt   M    2    2.50    2.9 2.900000     3.2  3.9
 \end{verbatim}
 
 The five-number summary for female cats is (in kg)
@@ -4630,9 +4595,7 @@ Maximum: 3.9
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/cats2-data-box-1.pdf}
-\caption{\label{fig:cats2-data-box}Box Plot of Cats Weights Separated by Sex}
+\includegraphics{Statistics_using_technology_files/figure-latex/cats2-data-box-1} \caption{Box Plot of Cats Weights Separated by Sex}\label{fig:cats2-data-box}
 \end{figure}
 
 Notice that the weights of female cats has a median less than male cats, and in fact it can be seen that the Q1 to Q3 of the female cats is less than the Q1 to Q3 of the male cats.
@@ -4690,14 +4653,12 @@ First, it might be useful to look at a visualization of the data, so create a de
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{time, }\DataTypeTok{data=}\NormalTok{Nerve)}
+\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{time, }\DataTypeTok{data=}\NormalTok{Nerve, }\DataTypeTok{title=}\StringTok{"Time between Successive Nerve Pulses"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/density-data-density-1.pdf}
-\caption{\label{fig:density-data-density}Density Plot of Health Expenditure}
+\includegraphics{Statistics_using_technology_files/figure-latex/density-data-density-1} \caption{Density Plot of Nerve Pulses}\label{fig:density-data-density}
 \end{figure}
 
 From the graph (Figure \ref{fig:density-data-density}), the data appears to be skewed right. Most of the time between successive nerve pulses appear to be around 5 or 10 1/50 second, but there are some times that are 60 1/50 second.
@@ -4709,8 +4670,8 @@ From the graph (Figure \ref{fig:density-data-density}), the data appears to be s
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_time median_time  sd_time Min. 1st Qu. Median
-## 1  10.95119         7.5 10.45956  0.5     3.5    7.5
+##   response     mean median       sd Min. 1st Qu. Median
+## 1     time 10.95119    7.5 10.45956  0.5     3.5    7.5
 ##       Mean 3rd Qu. Max.
 ## 1 10.95119      15   69
 \end{verbatim}
@@ -4721,10 +4682,20 @@ To visualize the five-number summary, create a box plot.
 
 
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{gf_boxplot}\NormalTok{(}\OperatorTok{~}\NormalTok{time, }\DataTypeTok{data=}\NormalTok{Nerve, }\DataTypeTok{title=}\StringTok{"Nerve Pulses"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\includegraphics{Statistics_using_technology_files/figure-latex/nerve-data-box-1} \caption{Box Plot of Health Expenditure}\label{fig:nerve-data-box}
+\end{figure}
+
 Since there are many dots outside the upper fence the data has many outliers. From all of this information, one could say that nerve pulses between successive pulses is around 11 1/50 second, with a spread of 19.5 1/50 second. Most of the values are round 11 1/50 second, but they are not very consistent. The density plot and boxplot show that there is a great deal of spread of the data and it is skewed to the right. This means mostly the speed is around 11 1/50 second, but there is a great deal of variability in the values.
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-5}{%
+\subsection{Homework}\label{homework-5}}
 
 \textbf{Use Technology on all problems. State the variable on all problems.}
 
@@ -5049,7 +5020,7 @@ To count the number of people who like cookie dough ice cream, use the following
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{ice_cream, }\DataTypeTok{data=}\NormalTok{Class)}
+\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{ice_cream, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{margins=}\OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5067,15 +5038,15 @@ To count the number of people who like cookie dough ice cream, use the following
 ##                      1                      2 
 ##                Sherbet Strawberry and banana  
 ##                      2                      1 
-##                Vanilla 
-##                      1
+##                Vanilla                  Total 
+##                      1                     27
 \end{verbatim}
 
 From this tally, it can be seen that 6 people like cookie dough ice cream. The probability that someone likes cookie dough is thus 6 divided by the number of people in the data frame. Instead of adding up all the numbers, the following command will find the proportions for you. Proportions are just probabilities.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{ice_cream, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{format=}\StringTok{"proportion"}\NormalTok{)}
+\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{ice_cream, }\DataTypeTok{data=}\NormalTok{Class, }\DataTypeTok{format=}\StringTok{"proportion"}\NormalTok{, }\DataTypeTok{margins=}\OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5093,14 +5064,14 @@ From this tally, it can be seen that 6 people like cookie dough ice cream. The p
 ##             0.03703704             0.07407407 
 ##                Sherbet Strawberry and banana  
 ##             0.07407407             0.03703704 
-##                Vanilla 
-##             0.03703704
+##                Vanilla                  Total 
+##             0.03703704             1.00000000
 \end{verbatim}
 
 So the probability that a person in the class likes cookie dough ice cream is 0.22.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-6}{%
+\subsection{Homework}\label{homework-6}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5990,8 +5961,8 @@ So \(P(\text{7 or 11})=\frac{8}{36}\)
 
 The actual odds are 3.5 to 1 while the payoff odds are 1 to 1. The casino pays you \$10 for your \$10 bet. If the casino paid you the actual odds, they would pay \$3.50 on every \$1 bet, and on \$10, they pay \(3.5*10\) =\$35. Their profit is \(35-10=\) \$25.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-7}{%
+\subsection{Homework}\label{homework-7}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6452,15 +6423,16 @@ A contingency table, is a cross tabulation of the data into different categories
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{Kids5}\OperatorTok{+}\NormalTok{ActCar, }\DataTypeTok{data=}\NormalTok{Car_pref)}
+\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{Kids5}\OperatorTok{+}\NormalTok{ActCar, }\DataTypeTok{data=}\NormalTok{Car_pref, }\DataTypeTok{margins=}\OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##      ActCar
-## Kids5 large medium small
-##   no     87     90    94
-##   yes    13     10     6
+##        ActCar
+## Kids5   large medium small Total
+##   no       87     90    94   271
+##   yes      13     10     6    29
+##   Total   100    100   100   300
 \end{verbatim}
 
 \begin{enumerate}
@@ -6562,8 +6534,8 @@ The probability of getting the first sampled part good is \(\frac{1200-85}{1200}
 So here is the rule:
 if the sample is very small compared to the size of the population, then you can assume that the probabilities are independent, even though they aren't technically. By the way, the probability of rejecting the shipment is \(1-0.9314=0.0686\).
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-8}{%
+\subsection{Homework}\label{homework-8}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6680,17 +6652,18 @@ The contingency table for the sex of a person and the size car the person prefer
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{PreferCar}\OperatorTok{+}\NormalTok{Sex, }\DataTypeTok{data=}\NormalTok{Car_pref)}
+\KeywordTok{tally}\NormalTok{(}\OperatorTok{~}\NormalTok{PreferCar}\OperatorTok{+}\NormalTok{Sex, }\DataTypeTok{data=}\NormalTok{Car_pref, }\DataTypeTok{margins=}\OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ##          Sex
-## PreferCar female male
-##    4           6   17
-##    large      26   47
-##    medium     75   61
-##    small      43   25
+## PreferCar female male Total
+##    4           6   17    23
+##    large      26   47    73
+##    medium     75   61   136
+##    small      43   25    68
+##    Total     150  150   300
 \end{verbatim}
 
 \begin{enumerate}
@@ -6850,8 +6823,8 @@ Picking \emph{r} objects from \emph{n} total objects when order doesn't matter \
 
 Most calculators have a factorial button on them, and many have the combination and permutation functions also.
 
-\hypertarget{homework-3}{%
-\subsection{Homework}\label{homework-3}}
+\hypertarget{homework-9}{%
+\subsection{Homework}\label{homework-9}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6981,12 +6954,18 @@ In this case the packages you need are arm and Weighted.Desc.Stat.
 \end{verbatim}
 
 \begin{verbatim}
-## Working directory is /Users/kathrynkozak/R_packages/Stat_book
+## Working directory is /Users/kathrynkozak/statistics_book_copy
 \end{verbatim}
 
 \begin{verbatim}
 ## 
 ## Attaching package: 'arm'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:mosaicCore':
+## 
+##     logit
 \end{verbatim}
 
 \begin{verbatim}
@@ -7008,9 +6987,7 @@ To draw the probability distribution, use the following command. First you need 
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/discrete-histogram-1.pdf}
-\caption{\label{fig:discrete-histogram}Histogram of Size of Family}
+\includegraphics{Statistics_using_technology_files/figure-latex/discrete-histogram-1} \caption{Histogram of Size of Family}\label{fig:discrete-histogram}
 \end{figure}
 
 This command is different than the commands used in the past, but is needed for discrete probability distributions. So putting a title on the graph uses the command main=``title you want'' instead of title= as before.
@@ -7200,8 +7177,8 @@ Since this probability is more than 5\%, four is not an unusually low value. Thu
 
 Since it is not unusual for a family to have four members, then you would not think anything is amiss.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-10}{%
+\subsection{Homework}\label{homework-10}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -7309,7 +7286,7 @@ Properties of a \textbf{binomial experiment} (or Bernoulli trial):
 
 3) There are only two outcomes, which are called a success and a failure.
 
-) The probability of a success doesn't change from trial to trial, where \emph{p} = probability of success and \emph{q} = \(1-p\) = probability of failure.
+4) The probability of a success doesn't change from trial to trial, where \emph{p} = probability of success and \emph{q} = \(1-p\) = probability of failure.
 
 If you know you have a binomial experiment, then you can calculate binomial probabilities. This is important because binomial probabilities come up often in real life. Examples of binomial experiments are:
 
@@ -7656,8 +7633,8 @@ According to the Center for Disease Control (CDC), about 1 in 88 children in the
 
 Since the probability of five or more children in a group of ten having autism is much less than 5\%, it is unusual to happen. If this does happen, then one may think that the proportion of children diagnosed with autism is actually more than 1/88.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-11}{%
+\subsection{Homework}\label{homework-11}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -7880,9 +7857,7 @@ On R, this is like what was done in Section 5.1. Makes sure that the packages ``
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/green-eyes-histogram-1.pdf}
-\caption{\label{fig:green-eyes-histogram}Histogram of Number of People with Green Eyes}
+\includegraphics{Statistics_using_technology_files/figure-latex/green-eyes-histogram-1} \caption{Histogram of Number of People with Green Eyes}\label{fig:green-eyes-histogram}
 \end{figure}
 
 Notice this graph (Figure \ref{fig:green-eyes-histogram}) is skewed right.
@@ -7931,8 +7906,8 @@ Using R Studio command such as those in Section 5.1:
 
 You expect on average that out of 20 people, less than 1 person would have green eyes, with are variance of 0.198 \(people^2\) and a standard deviation of 0.44 people.
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-12}{%
+\subsection{Homework}\label{homework-12}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -8147,9 +8122,7 @@ Looking at the density plot of a quantitative variable, one can guess what the d
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6-density-1.pdf}
-\caption{\label{fig:NHANES6-density}Density Plot of Weight of a Person}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6-density-1} \caption{Density Plot of Weight of a Person}\label{fig:NHANES6-density}
 \end{figure}
 
 (Figure \ref{fig:headcirc6-density}looks somewhat symmetric, and maybe bell shaped.
@@ -8159,9 +8132,7 @@ Consider, the variable head circumference (HeadCirc) in the NHANES data frame. T
 (ref:headcirc6-density=cap) Density Plot of Head Circumference of a Person
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/headcirc6-density-1.pdf}
-\caption{\label{fig:headcirc6-density}(ref:headcirc6-density=cap)}
+\includegraphics{Statistics_using_technology_files/figure-latex/headcirc6-density-1} \caption{(ref:headcirc6-density=cap)}\label{fig:headcirc6-density}
 \end{figure}
 
 This (Figure \ref{fig:headcirc60density}) looks somewhat skewed left.
@@ -8171,21 +8142,17 @@ Now consider the variable BMI from the NHANES data frame. The density plot is
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6a-density-1.pdf}
-\caption{\label{fig:NHANES6a-density}Density Plot of BMI of a Person}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6a-density-1} \caption{Density Plot of BMI of a Person}\label{fig:NHANES6a-density}
 \end{figure}
 
-This density plot appears to be skewed left.
+This density plot appears to be skewed right
 
 Now consider the variable SmokeAge. Its density plot is (Figure \ref{fig:NHANES6b-density})
 
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6b-density-1.pdf}
-\caption{\label{fig:NHANES6b-density}Density Plot of Age when Person Started Smoking}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6b-density-1} \caption{Density Plot of Age when Person Started Smoking}\label{fig:NHANES6b-density}
 \end{figure}
 
 This distribution appears to be bimodal.
@@ -8195,9 +8162,7 @@ lastly, consider the variable Pulse. The density plot is (Figure \ref{fig:NHANES
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6c-density-1.pdf}
-\caption{\label{fig:NHANES6c-density}Density Plot of Pulse Rate of a person}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6c-density-1} \caption{Density Plot of Pulse Rate of a person}\label{fig:NHANES6c-density}
 \end{figure}
 
 This density plot appears to be symmetric and could almost be considered bell shaped.
@@ -8220,9 +8185,7 @@ Normal curves can be tall and skinny or they can be short and fat. They are all 
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curveb-1.pdf}
-\caption{\label{fig:normal-curveb}Normal Distribution with \(\mu = 2\), and \(\sigma = 4\)}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curveb-1} \caption{Normal Distribution with \(\mu = 2\), and \(\sigma = 4\)}\label{fig:normal-curveb}
 \end{figure}
 
 Every normal curve has common features.
@@ -8253,12 +8216,6 @@ Approximately 99.7\% of the data is within three standard deviations of the mean
 }
 
 \textbf{Image \#6.1: Empirical Rule}
-
-\begin{figure}
-\centering
-\includegraphics{Empirical_rule.png}
-\caption{Graph of Empirical Rule}
-\end{figure}
 
 Be careful, there is still some area left over in each end. Remember, the maximum a probability can be is 100\%, so if you calculate you will see that for both ends together there is 0.3\% of the curve. Because of
 symmetry, you can divide this equally between both ends and find that there is 0.15\% in each tail beyond the 3rd standard deviations.
@@ -8327,9 +8284,7 @@ Now, draw a picture (Figure \ref{fig:normal-curve61}).
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve61-1.pdf}
-\caption{\label{fig:normal-curve61}Normal Distribution for \(P(x>280)\)}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve61-1} \caption{Normal Distribution for \(P(x>280)\)}\label{fig:normal-curve61}
 \end{figure}
 
 The probability of a pregnancy lasting longer than 280 days is \(P(x>280)=0.187\). The command in R Studio is
@@ -8363,9 +8318,7 @@ Now, draw a picture (Figure \ref{fig:normal-curve62}).
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve62-1.pdf}
-\caption{\label{fig:normal-curve62}Normal Distribution for \(P(x<250)\)}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve62-1} \caption{Normal Distribution for \(P(x<250)\)}\label{fig:normal-curve62}
 \end{figure}
 
 The probability of a pregnancy lasting longer than 250 days is \(P(x<250)=0.0073\). The command in R Studio is
@@ -8399,9 +8352,7 @@ Now draw a picture (Figure \ref{fig:normal-curve63}).
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve63-1.pdf}
-\caption{\label{fig:normal-curve63}Normal Distribution for \(P(265<x<280)\)}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve63-1} \caption{Normal Distribution for \(P(265<x<280)\)}\label{fig:normal-curve63}
 \end{figure}
 
 The probability of a pregnancy lasting between 265 days and 280 days is \(P(265<x<280)=0.187\). To find the area between two values on the normal distribution, first, find the area to the left of the lower value, Graphically, this looks like (Figure \ref{fig:normal-curve-preg})
@@ -8409,9 +8360,7 @@ The probability of a pregnancy lasting between 265 days and 280 days is \(P(265<
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-preg-1.pdf}
-\caption{\label{fig:normal-curve-preg}Normal Distribution for \(P(x<265)\)}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-preg-1} \caption{Normal Distribution for \(P(x<265)\)}\label{fig:normal-curve-preg}
 \end{figure}
 
 Now find the area less than 280. Graphically this looks like (Figure \ref{fig:normal-curve-preg1})
@@ -8419,9 +8368,7 @@ Now find the area less than 280. Graphically this looks like (Figure \ref{fig:no
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-preg1-1.pdf}
-\caption{\label{fig:normal-curve-preg1}Normal Distribution for \(P(x<280)\)}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-preg1-1} \caption{Normal Distribution for \(P(x<280)\)}\label{fig:normal-curve-preg1}
 \end{figure}
 
 Looking at the three figures, if you take the area in (Figure \ref{fig:normal-curve-preg1}) and subtract the area in (Figure \ref{fig:normal-curve-preg}), you get the area in the (Figure \ref{fig:normal-curve63}). In R Studio, the way to find the probability the probability of a pregnancy lasting between 265 days and 280 days, \(P(265<x<280)=0.595\) use the following command
@@ -8516,9 +8463,7 @@ Now, draw a picture (Figure \ref{fig:normal-curve-SAT}).
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-SAT-1.pdf}
-\caption{\label{fig:normal-curve-SAT}Normal Distribution for SAT Mathematics Score}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-SAT-1} \caption{Normal Distribution for SAT Mathematics Score}\label{fig:normal-curve-SAT}
 \end{figure}
 
 To find \(P(x>700)=0.0559\), the command in R would be
@@ -8552,9 +8497,7 @@ Now, draw a picture (Figure \ref{fig:normal-curve-SAT1}).
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-SAT1-1.pdf}
-\caption{\label{fig:normal-curve-SAT1}Normal Distribution for Mathematics SAT Score}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-SAT1-1} \caption{Normal Distribution for Mathematics SAT Score}\label{fig:normal-curve-SAT1}
 \end{figure}
 
 To find \(P(x<400)=0.165\), the command in R would be
@@ -8588,9 +8531,7 @@ Now, draw a picture (Figure \ref{fig:normal-curve-SAT2}).
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-SAT2-1.pdf}
-\caption{\label{fig:normal-curve-SAT2}Normal Distribution for SAT Mathematics Score}
+\includegraphics{Statistics_using_technology_files/figure-latex/normal-curve-SAT2-1} \caption{Normal Distribution for SAT Mathematics Score}\label{fig:normal-curve-SAT2}
 \end{figure}
 
 To find \(P(500<x<650)=0.425\), the command in R would be
@@ -8632,8 +8573,8 @@ To find this x value on R Studio, use the command
 
 So, 1\% of all people who took the SAT scored over about 786 points on the mathematics SAT.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-13}{%
+\subsection{Homework}\label{homework-13}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -8981,9 +8922,7 @@ The density plot produced is in (Figure \ref{fig:blowhole-density}).
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/blowhole-density-1.pdf}
-\caption{\label{fig:blowhole-density}Density Plot for Kiama Blowhole}
+\includegraphics{Statistics_using_technology_files/figure-latex/blowhole-density-1} \caption{Density Plot for Kiama Blowhole}\label{fig:blowhole-density}
 \end{figure}
 
 This looks skewed right and not symmetric.
@@ -9009,9 +8948,7 @@ The normal quantile plot is in (Figure \ref{fig:blowhole-qq}).
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/blowhole-qq-1.pdf}
-\caption{\label{fig:blowhole-qq}Normal Probability Plot}
+\includegraphics{Statistics_using_technology_files/figure-latex/blowhole-qq-1} \caption{Normal Probability Plot}\label{fig:blowhole-qq}
 \end{figure}
 
 (Figure \ref{fig:blowhole-qq}) looks more like an exponential growth than linear.
@@ -9105,9 +9042,7 @@ The density plot is in (Figure \ref{fig:pulse-density}).
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/pulse-density-1.pdf}
-\caption{\label{fig:pulse-density}Density Plot for Pulse}
+\includegraphics{Statistics_using_technology_files/figure-latex/pulse-density-1} \caption{Density Plot for Pulse}\label{fig:pulse-density}
 \end{figure}
 
 This looks somewhat symmetric.
@@ -9133,9 +9068,7 @@ The normal quantile plot is in (Figure \ref{fig:pulse-qq}).
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/pulse-qq-1.pdf}
-\caption{\label{fig:pulse-qq}Normal Quantile Plot}
+\includegraphics{Statistics_using_technology_files/figure-latex/pulse-qq-1} \caption{Normal Quantile Plot}\label{fig:pulse-qq}
 \end{figure}
 
 (Figure \ref{fig:pulse-qq}) looks fairly linear.
@@ -9152,8 +9085,8 @@ The normal quantile plot is in (Figure \ref{fig:pulse-qq}).
 
 Considering the density plot is bell shaped and the normal probability plot looks linear. The conclusion is that this sample is from a population that is normally distributed.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-14}{%
+\subsection{Homework}\label{homework-14}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -9294,14 +9227,12 @@ The NHANES data frame has the pulse rates for approximately 50,000 individuals. 
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6h-density-1.pdf}
-\caption{\label{fig:NHANES6h-density}Distribution of Pulse Rate}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6h-density-1} \caption{Distribution of Pulse Rate}\label{fig:NHANES6h-density}
 \end{figure}
 
 \begin{verbatim}
-##   mean_Pulse sd_Pulse
-## 1   73.55973 12.15542
+##   response     mean       sd
+## 1    Pulse 73.55973 12.15542
 \end{verbatim}
 
 Suppose you take a random sample of 10 pulse rates from those 50,000 individuals. A random sample of data from 10 individuals is:
@@ -9315,18 +9246,18 @@ Suppose you take a random sample of 10 pulse rates from those 50,000 individuals
 
 \begin{verbatim}
 ## # A tibble: 10 x 76
-##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-##  1 62575 2011_12  female    24 " 20-29"         NA White
-##  2 69138 2011_12  female    16 " 10-19"         NA White
-##  3 71611 2011_12  female    15 " 10-19"         NA White
-##  4 58941 2009_10  male       8 " 0-9"          104 Mexi~
-##  5 67166 2011_12  female     9 " 0-9"           NA Hisp~
-##  6 63979 2011_12  male       8 " 0-9"           NA White
-##  7 62800 2011_12  female    15 " 10-19"         NA White
-##  8 56580 2009_10  female    79 " 70+"          948 White
-##  9 60833 2009_10  male      52 " 50-59"        633 White
-## 10 67356 2011_12  female    49 " 40-49"         NA White
+##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>   
+##  1 67427 2011_12  male      24 " 20-29"         NA Other   
+##  2 67039 2011_12  female    31 " 30-39"         NA White   
+##  3 57587 2009_10  male      47 " 40-49"        569 Mexican 
+##  4 60721 2009_10  male      40 " 40-49"        489 White   
+##  5 55190 2009_10  female    41 " 40-49"        498 Other   
+##  6 69219 2011_12  male       4 " 0-9"           NA Hispanic
+##  7 62459 2011_12  male       4 " 0-9"           NA White   
+##  8 66547 2011_12  male      65 " 60-69"         NA White   
+##  9 52247 2009_10  male      45 " 40-49"        548 White   
+## 10 69324 2011_12  male      42 " 40-49"         NA White   
 ## # ... with 69 more variables: Race3 <fct>, Education <fct>,
 ## #   MaritalStatus <fct>, HHIncome <fct>, HHIncomeMid <int>,
 ## #   Poverty <dbl>, HomeRooms <int>, HomeOwn <fct>,
@@ -9358,8 +9289,8 @@ Suppose you take a random sample of 10 pulse rates from those 50,000 individuals
 It might be useful to find the mean pulse rate from a random sample of size 10.
 
 \begin{verbatim}
-##   mean_Pulse
-## 1   67.77778
+##   response     mean
+## 1    Pulse 64.85714
 \end{verbatim}
 
 Now suppose you took another random sample of size 10 and found the mean pulse rate for that sample. Repeat this process 100 times. At this point you would basically have a new sample of 100 mean pulse rates. You could assess how this sample is distributed by creating a density plot.
@@ -9367,14 +9298,12 @@ Now suppose you took another random sample of size 10 and found the mean pulse r
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6e-density-1.pdf}
-\caption{\label{fig:NHANES6e-density}Density Plot of Sample Means When \emph{n} = 10}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6e-density-1} \caption{Density Plot of Sample Means When \emph{n} = 10}\label{fig:NHANES6e-density}
 \end{figure}
 
 \begin{verbatim}
-##   mean_means sd_means
-## 1   73.19368 3.786986
+##   response     mean       sd
+## 1    means 73.68607 4.214932
 \end{verbatim}
 
 This distribution is a sampling distribution. That is all a sampling distribution is. It is a distribution created from statistics.
@@ -9388,14 +9317,12 @@ This density plot of the sampling distribution is displayed in (Figure \ref{fig:
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6f-density-1.pdf}
-\caption{\label{fig:NHANES6f-density}Density Plot of Sample Means When \emph{n} = 50}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6f-density-1} \caption{Density Plot of Sample Means When \emph{n} = 50}\label{fig:NHANES6f-density}
 \end{figure}
 
 \begin{verbatim}
-##   mean_means sd_means
-## 1   73.79957 1.987379
+##   response     mean       sd
+## 1    means 73.44939 1.903852
 \end{verbatim}
 
 Notice this density plot of the sample mean looks approximately symmetrical and could almost be called normal. Notice, the mean of the sample means is 73.6 bpm which is approximately what the population mean is. The standard deviation of the sample means is 1.77 bpm which is around \(\frac{1}{7}\) of the population standard deviation. What if you keep increasing \emph{n}? What will the sampling distribution of the sample mean look like? In other words, what does the sampling distribution of \(\bar{x}\) look like as \emph{n} gets even larger?
@@ -9405,23 +9332,21 @@ This depends on how the original distribution is distributed. In Example \#6.3.1
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6g-density-1.pdf}
-\caption{\label{fig:NHANES6g-density}Distribution of Age when Started to Smoke}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6g-density-1} \caption{Distribution of Age when Started to Smoke}\label{fig:NHANES6g-density}
 \end{figure}
 
 \begin{verbatim}
-##   mean_SmokeAge sd_SmokeAge
-## 1      17.82662     5.32666
+##   response     mean      sd
+## 1 SmokeAge 17.82662 5.32666
 \end{verbatim}
 
 Now take 100 samples of size 50 individuals from the NHANES Data Frame. Then graph a density plot of SmokeAge. Notice the the sampling distribution of the sample means looks fairly normally distributed even though the original random variable was not normally distributed. The mean of the sample mean. \(\mu_{ \bar{x}}=\) 17.8 years and the standard deviation of the sample mean, \(\sigma_{\bar{x}}=\) 1.56 years. The mean of the sample mean is the same as the mean of the population, but the standard deviation of the sample mean is much less than the standard deviation of the original data.
 
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6-random-1.pdf}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES6-random-1}
 
 \begin{verbatim}
-##   mean_means sd_means
-## 1    17.8478 1.463188
+##   response     mean       sd
+## 1    means 17.58749 1.361558
 \end{verbatim}
 
 Once question is, why is the mean of the sample means the same as the mean of the population? Suppose you have a random variable that has a population mean, \(\mu\), and a population standard deviation, \(\sigma\). If a sample of size \emph{n} is taken, then the sample mean, has a mean \(\mu_{ \bar{x}}=\mu\) and standard deviation of \(\sigma_{ \bar{x}}=\frac{\sigma}{\sqrt{n}}\) . The standard deviation of the sample mean is lower because by taking the mean you are averaging out the extreme values, which makes the distribution of the sample mean less spread out.
@@ -9583,8 +9508,8 @@ To find \(P(\bar{x}>21)= 3.42X10^{-34}\) using R studio, use the command:
 
 The probability of a sample mean of 35 smoking Americans being more than 21 years when they smoked for the first time is very small. This is extremely unlikely to happen. If it does, it may make you wonder about the sample. Could the population mean have increased from the 17.8 years as was stated? Could the sample not have been random, and instead have been a group of smoking Americans who had started to smoke much later? These questions, and more, are ones that you would want to ask as a researcher
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-15}{%
+\subsection{Homework}\label{homework-15}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -9904,8 +9829,8 @@ Now what should you do? Looking at the data set, you see some of the times are a
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_life
-## 1       490
+##   response mean
+## 1     life  490
 \end{verbatim}
 
 The sample mean is 491.42 days. Looking at the sample mean, one might think that you are right. However, the standard deviation and the sample size also plays a role, so maybe you are wrong.
@@ -10120,8 +10045,8 @@ Sample statistic:
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_life
-## 1       490
+##   response mean
+## 1     life  490
 \end{verbatim}
 
 Test statistic:
@@ -10344,8 +10269,8 @@ Level of significance: It appears that both errors may be issues in this case. Y
 
 Hint -- hypothesis testing is really easy if you follow the same recipe every time. The only differences in the various problems are the assumptions of the test and the test statistic you calculate so you can find the p-value. Do the same steps, in the same order, with the same words, every time and these problems become very easy.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-16}{%
+\subsection{Homework}\label{homework-16}}
 
 \textbf{For the problems in this section, a question is being asked. This is to help you understand what the hypotheses are. You are not to run any hypothesis tests nor come up with any conclusions in this section.}
 
@@ -10533,7 +10458,7 @@ Use the following command in R Studio:
 
 \begin{verbatim}
 ## 
-## 	1-sample proportions test with continuity correction
+##  1-sample proportions test with continuity correction
 ## 
 ## data:  51 out of 14495
 ## X-squared = 3.3084, df = 1, p-value = 0.06893
@@ -10639,7 +10564,7 @@ On R studio, use the following command
 
 \begin{verbatim}
 ## 
-## 	1-sample proportions test with continuity correction
+##  1-sample proportions test with continuity correction
 ## 
 ## data:  125 out of 500
 ## X-squared = 2.4505, df = 1, p-value = 0.1175
@@ -10677,8 +10602,8 @@ There is not enough evidence to support that the proportion of women who breastf
 
 Notice, the conclusion is that there wasn't enough evidence to support \(H_a\). The conclusion was not that you support \(H_o\). There are many reasons why you can't say that \(H_o\) is true. It could be that the countries you chose were not very representative of what truly happens. If you instead looked at all high-income countries and compared them to low-income countries, you might have different results. It could also be that the sample you collected in the low-income country was not representative. It could also be that income level is not an indication of breastfeeding habits. It could be that the sample that was taken didn't show evidence but another sample would show evidence. There could be other factors involved. This is why you can't say that you support \(H_o\). There are too many other factors that could be the reason that you failed to reject \(H_0\).
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-17}{%
+\subsection{Homework}\label{homework-17}}
 
 \textbf{In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.}
 
@@ -10728,18 +10653,18 @@ The standard deviation of BMI is not known for Australians. To answer this quest
 
 \begin{verbatim}
 ## # A tibble: 10 x 76
-##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-##  1 66193 2011_12  female    25 " 20-29"         NA Black
-##  2 64048 2011_12  female    54 " 50-59"         NA White
-##  3 55614 2009_10  female     4 " 0-9"           56 Mexi~
-##  4 60144 2009_10  male      57 " 50-59"        690 White
-##  5 56347 2009_10  female     2 " 0-9"           28 Other
-##  6 60392 2009_10  female    11 " 10-19"        134 Black
-##  7 60160 2009_10  female    63 " 60-69"        758 White
-##  8 58215 2009_10  female    54 " 50-59"        659 White
-##  9 71016 2011_12  female     5 " 0-9"           NA Mexi~
-## 10 63850 2011_12  female    49 " 40-49"         NA White
+##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>   
+##  1 70869 2011_12  male      38 " 30-39"         NA Mexican 
+##  2 67115 2011_12  male      59 " 50-59"         NA Hispanic
+##  3 54825 2009_10  male      40 " 40-49"        480 White   
+##  4 65229 2011_12  male      31 " 30-39"         NA White   
+##  5 54173 2009_10  male      47 " 40-49"        569 White   
+##  6 65546 2011_12  female    22 " 20-29"         NA Black   
+##  7 67263 2011_12  female     3 " 0-9"           NA Mexican 
+##  8 62349 2011_12  female    23 " 20-29"         NA White   
+##  9 70283 2011_12  male      11 " 10-19"         NA Mexican 
+## 10 67786 2011_12  male      45 " 40-49"         NA White   
 ## # ... with 69 more variables: Race3 <fct>, Education <fct>,
 ## #   MaritalStatus <fct>, HHIncome <fct>, HHIncomeMid <int>,
 ## #   Poverty <dbl>, HomeRooms <int>, HomeOwn <fct>,
@@ -10777,8 +10702,8 @@ The mean BMI from this sample is
 \end{Shaded}
 
 \begin{verbatim}
-##   mean_BMI
-## 1 23.58889
+##   response   mean
+## 1      BMI 29.956
 \end{verbatim}
 
 The sample mean for Americans is different from the mean BMI for Australians, but could it just be by chance. Suppose you take another sample of size 10, but you only have these 10 BMIs to work with. So how could you do this. One way is to assume that the sample you took is representative of the entire population, and so you create a population by copying this sample over and over again. So you could have over 1000 copies of this sample of 10 BMIs. Then take a sample of size 10 from this created population. When doing this, you could conceivably choose the same number several times that was in the original sample and not choose some of the numbers that were in the original sample. Instead of physically creating this new population, you could just take samples from your original sample but with replacement. This means that you randomly pick the first number, record it, and then put it back that value back before collecting the next number. This kind a sampling is called randomization sampling. A sample using randomization could be
@@ -10793,18 +10718,18 @@ Table \#7.3.1a
 
 \begin{verbatim}
 ## # A tibble: 10 x 77
-##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-##  1 71016 2011_12  female     5 " 0-9"           NA Mexi~
-##  2 64048 2011_12  female    54 " 50-59"         NA White
-##  3 55614 2009_10  female     4 " 0-9"           56 Mexi~
-##  4 71016 2011_12  female     5 " 0-9"           NA Mexi~
-##  5 55614 2009_10  female     4 " 0-9"           56 Mexi~
-##  6 60144 2009_10  male      57 " 50-59"        690 White
-##  7 56347 2009_10  female     2 " 0-9"           28 Other
-##  8 60160 2009_10  female    63 " 60-69"        758 White
-##  9 64048 2011_12  female    54 " 50-59"         NA White
-## 10 55614 2009_10  female     4 " 0-9"           56 Mexi~
+##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##    <int> <fct>    <fct>  <int> <fct>         <int> <fct>   
+##  1 54825 2009_10  male      40 " 40-49"        480 White   
+##  2 70283 2011_12  male      11 " 10-19"         NA Mexican 
+##  3 62349 2011_12  female    23 " 20-29"         NA White   
+##  4 62349 2011_12  female    23 " 20-29"         NA White   
+##  5 65546 2011_12  female    22 " 20-29"         NA Black   
+##  6 62349 2011_12  female    23 " 20-29"         NA White   
+##  7 67786 2011_12  male      45 " 40-49"         NA White   
+##  8 67263 2011_12  female     3 " 0-9"           NA Mexican 
+##  9 70869 2011_12  male      38 " 30-39"         NA Mexican 
+## 10 67115 2011_12  male      59 " 50-59"         NA Hispanic
 ## # ... with 70 more variables: Race3 <fct>, Education <fct>,
 ## #   MaritalStatus <fct>, HHIncome <fct>, HHIncomeMid <int>,
 ## #   Poverty <dbl>, HomeRooms <int>, HomeOwn <fct>,
@@ -10838,14 +10763,12 @@ Table \#7.3.1a
 Notice that some of the unit of observations are repeated. That is what happens when you resample. Now one resampling isn't enough. So you want to resample many times so you can create a resampling distribution.
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES10-resample-histogram-1.pdf}
-\caption{\label{fig:sample-NHANES10-resample-histogram}Resampling distribution}
+\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES10-resample-histogram-1} \caption{Resampling distribution}\label{fig:sample-NHANES10-resample-histogram}
 \end{figure}
 
 \begin{verbatim}
-##    mean_mea   sd_mea
-## 1 -2.177355 2.218221
+##   response      mean       sd
+## 1      mea -4.055455 1.364596
 \end{verbatim}
 
 Notice the sample mean from the resampling is very close to 0, so that means that the US BMI are not that different from the Australian BMI. There doesn't seem to be enough evidence to show that the US BMI is different from the Australian BMI. One note, the sample size used here was 10 so you could see the sample, but really the sample size should be more than 100 for this method to be valid.
@@ -10873,9 +10796,7 @@ The Student's t-distribution is a bell-shape that is more spread out than the no
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/tdistribution-graph-1.pdf}
-\caption{\label{fig:tdistribution-graph}Typical Student t-Distributions}
+\includegraphics{Statistics_using_technology_files/figure-latex/tdistribution-graph-1} \caption{Typical Student t-Distributions}\label{fig:tdistribution-graph}
 \end{figure}
 
 As the degrees of freedom increases, the student's t-distribution looks
@@ -10996,14 +10917,14 @@ A random sample of 50 body mass index (BMI) were taken from the NHANES Data fram
 
 \begin{verbatim}
 ## # A tibble: 6 x 76
-##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##   <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-## 1 67529 2011_12  female    11 " 10-19"         NA White
-## 2 57517 2009_10  male       2 " 0-9"           29 White
-## 3 57586 2009_10  male      37 " 30-39"        453 White
-## 4 61234 2009_10  male      35 " 30-39"        429 White
-## 5 58730 2009_10  male      38 " 30-39"        467 Other
-## 6 55651 2009_10  female    17 " 10-19"        210 Other
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##   <int> <fct>    <fct>  <int> <fct>         <int> <fct>   
+## 1 68722 2011_12  male      40 " 40-49"         NA Hispanic
+## 2 62870 2011_12  male      13 " 10-19"         NA Mexican 
+## 3 70820 2011_12  female    13 " 10-19"         NA Hispanic
+## 4 61453 2009_10  male      76 " 70+"          917 Hispanic
+## 5 57841 2009_10  male      31 " 30-39"        380 Hispanic
+## 6 53876 2009_10  male      37 " 30-39"        452 White   
 ## # ... with 69 more variables: Race3 <fct>, Education <fct>,
 ## #   MaritalStatus <fct>, HHIncome <fct>, HHIncomeMid <int>,
 ## #   Poverty <dbl>, HomeRooms <int>, HomeOwn <fct>,
@@ -11084,9 +11005,7 @@ level of significance \(\alpha=0.05\)
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES-50-density-1.pdf}
-\caption{\label{fig:sample-NHANES-50-density}Density Plot of BMI from NHANES sample}
+\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES-50-density-1} \caption{Density Plot of BMI from NHANES sample}\label{fig:sample-NHANES-50-density}
 \end{figure}
 
 
@@ -11098,9 +11017,7 @@ level of significance \(\alpha=0.05\)
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/sample-HNANES-50-qq-1.pdf}
-\caption{\label{fig:sample-HNANES-50-qq}Normal Quantile Plot of BMI from NHANES sample}
+\includegraphics{Statistics_using_technology_files/figure-latex/sample-HNANES-50-qq-1} \caption{Normal Quantile Plot of BMI from NHANES sample}\label{fig:sample-HNANES-50-qq}
 \end{figure}
 
 The density plot looks somewhat skewed right and the normal quantile plot looks somewhat linear. However, there doesn't seem to be strong evidence that the sample comes from a population that is normally distributed. However, since the sample is moderate to large, the t-test is robust to this assumption not being met. So the results of the test are probably valid.
@@ -11123,16 +11040,16 @@ On R Studio, the command would be
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  BMI
-## t = 0.88982, df = 47, p-value = 0.3781
+## t = -2.0562, df = 46, p-value = 0.04546
 ## alternative hypothesis: true mean is not equal to 27.2
 ## 95 percent confidence interval:
-##  25.70303 31.07156
+##  23.50063 27.16064
 ## sample estimates:
 ## mean of x 
-##  28.38729
+##  25.33064
 \end{verbatim}
 
 The test statistic is the t in the output, the sample statistic is the mean of x in the output, and the p-value is the p-value is the output.
@@ -11280,9 +11197,7 @@ World Health Organization (WHO).
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/expectancy-male-density-1.pdf}
-\caption{\label{fig:expectancy-male-density}Density Plot of Life Expectancies of Males in Europe in 2000}
+\includegraphics{Statistics_using_technology_files/figure-latex/expectancy-male-density-1} \caption{Density Plot of Life Expectancies of Males in Europe in 2000}\label{fig:expectancy-male-density}
 \end{figure}
 
 
@@ -11294,9 +11209,7 @@ World Health Organization (WHO).
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/expanctancy-male-qq-1.pdf}
-\caption{\label{fig:expanctancy-male-qq}Normal Quantile Plot of Life Expectancies of Males in Europe in 2000}
+\includegraphics{Statistics_using_technology_files/figure-latex/expanctancy-male-qq-1} \caption{Normal Quantile Plot of Life Expectancies of Males in Europe in 2000}\label{fig:expanctancy-male-qq}
 \end{figure}
 
 This sample does not appear to come from a population that is normally distributed. This sample is moderate to large, so it is good that the t-test is robust.
@@ -11319,7 +11232,7 @@ On R Studio, the command is
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  expect
 ## t = -11.733, df = 52, p-value = 3.145e-16
@@ -11369,8 +11282,8 @@ If you want to conduct a hypothesis test with \(H_a:\mu<\mu_o\), then the R Stud
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-18}{%
+\subsection{Homework}\label{homework-18}}
 
 \textbf{In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.}
 
@@ -12147,26 +12060,14 @@ One last thing to know about confidence is how the sample size and confidence le
 Think about shooting an arrow into the target. Suppose you are really good at that and that you have a 90\% chance of hitting the bull's eye. Now the bull's eye is very small. Since you hit the bull's eye
 approximately 90\% of the time, then you probably hit inside the next ring out 95\% of the time. You have a better chance of doing this, but the circle is bigger. You probably have a 99\% chance of hitting the target, but that is a much bigger circle to hit. You can see, as your confidence in hitting the target increases, the circle you hit gets bigger. The same is true for confidence intervals. This is demonstrated in figure \#8.1.1.
 
-\begin{figure}
-\centering
-\includegraphics{effect_confidence_level.png}
-\caption{figure of Affect of Confidence Level}
-\end{figure}
-
 The higher level of confidence makes a wider interval. There's a trade off between width and confidence level. You can be really confident about your answer but your answer will not be very precise. Or you can have a precise answer (small margin of error) but not be very confident about your answer.
 
 Now look at how the sample size affects the size of the interval. Suppose figure \#8.1.2 represents confidence intervals calculated on a 95\% interval. A larger sample size from a representative sample makes the width of the interval narrower. This makes sense. Large samples are closer to the true population so the point estimate is pretty close to the true value.
 
-\begin{figure}
-\centering
-\includegraphics{effect_sample_size.png}
-\caption{Figure of Affect of Sample Size}
-\end{figure}
-
 Now you know everything you need to know about confidence intervals except for the actual formula. The formula depends on which parameter you are trying to estimate. With different situations you will be given the confidence interval for that parameter.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-19}{%
+\subsection{Homework}\label{homework-19}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -12306,7 +12207,7 @@ The command in R Studio for a confidence interval for a proportion is
 
 \begin{verbatim}
 ## 
-## 	1-sample proportions test with continuity correction
+##  1-sample proportions test with continuity correction
 ## 
 ## data:  51 out of 14495
 ## X-squared = 14290, df = 1, p-value < 2.2e-16
@@ -12383,7 +12284,7 @@ On R studio, use the following command
 
 \begin{verbatim}
 ## 
-## 	1-sample proportions test with continuity correction
+##  1-sample proportions test with continuity correction
 ## 
 ## data:  125 out of 500
 ## X-squared = 124, df = 1, p-value < 2.2e-16
@@ -12406,8 +12307,8 @@ On R studio, use the following command
   Real World Interpretation: The proportion of women in low-income countries who breastfeed their infants is between 0.219 and 0.284.
 \end{enumerate}
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-20}{%
+\subsection{Homework}\label{homework-20}}
 
 \textbf{In each problem show all steps of the confidence interval. If some of the assumptions are not met, note that the results of the interval may not be correct and then continue the process of the confidence interval.}
 
@@ -12518,14 +12419,14 @@ A random sample of 50 body mass index (BMI) were taken from the NHANES Data fram
 
 \begin{verbatim}
 ## # A tibble: 6 x 76
-##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1
-##   <int> <fct>    <fct>  <int> <fct>         <int> <fct>
-## 1 65676 2011_12  female    35 " 30-39"         NA White
-## 2 52496 2009_10  female    60 " 60-69"        721 White
-## 3 69798 2011_12  female    21 " 20-29"         NA White
-## 4 52326 2009_10  male      28 " 20-29"        343 White
-## 5 53524 2009_10  female    39 " 30-39"        471 White
-## 6 54437 2009_10  female    51 " 50-59"        619 Other
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1  
+##   <int> <fct>    <fct>  <int> <fct>         <int> <fct>  
+## 1 53491 2009_10  male       6 " 0-9"           79 Mexican
+## 2 63545 2011_12  female    56 " 50-59"         NA Black  
+## 3 58026 2009_10  male      10 " 10-19"        127 Mexican
+## 4 53402 2009_10  female    28 " 20-29"        344 White  
+## 5 70781 2011_12  male      19 " 10-19"         NA Mexican
+## 6 51979 2009_10  female     9 " 0-9"          118 Mexican
 ## # ... with 69 more variables: Race3 <fct>, Education <fct>,
 ## #   MaritalStatus <fct>, HHIncome <fct>, HHIncomeMid <int>,
 ## #   Poverty <dbl>, HomeRooms <int>, HomeOwn <fct>,
@@ -12587,28 +12488,24 @@ A random sample of 50 body mass index (BMI) were taken from the NHANES Data fram
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{BMI, }\DataTypeTok{data=}\NormalTok{sample_NHANES_}\DecValTok{50}\NormalTok{)}
+\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{BMI, }\DataTypeTok{data=}\NormalTok{sample_NHANES_}\DecValTok{50}\NormalTok{, }\DataTypeTok{title=}\StringTok{"BMI of an American"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES8-density-1.pdf}
-\caption{\label{fig:sample-NHANES8-density}Density Plot of BMI from NHANES sample}
+\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES8-density-1} \caption{Density Plot of BMI from NHANES sample}\label{fig:sample-NHANES8-density}
 \end{figure}
 
 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{BMI, }\DataTypeTok{data=}\NormalTok{sample_NHANES_}\DecValTok{50}\NormalTok{)}
+\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{BMI, }\DataTypeTok{data=}\NormalTok{sample_NHANES_}\DecValTok{50}\NormalTok{, }\DataTypeTok{title=}\StringTok{"BMI of an American"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES8-qq-1.pdf}
-\caption{\label{fig:sample-NHANES8-qq}Normal Quantile Plot of BMI from NHANES sample}
+\includegraphics{Statistics_using_technology_files/figure-latex/sample-NHANES8-qq-1} \caption{Normal Quantile Plot of BMI from NHANES sample}\label{fig:sample-NHANES8-qq}
 \end{figure}
 
 The density plot looks somewhat skewed right and the normal quantile plot looks somewhat linear. However, there doesn't seem to be strong evidence that the sample comes from a population that is normally distributed. However, since the sample is moderate to large, the t-test is robust to this assumption not being met. So the results of the test are probably valid.
@@ -12631,16 +12528,16 @@ On R Studio, the command would be
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  BMI
-## t = 25.818, df = 48, p-value < 2.2e-16
+## t = 20.531, df = 46, p-value < 2.2e-16
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  25.08079 29.31717
+##  23.72528 28.88323
 ## sample estimates:
 ## mean of x 
-##  27.19898
+##  26.30426
 \end{verbatim}
 
 The sample statistic is the mean of x in the output, and confidence interval is under the words 95 percent confidence interval.
@@ -12737,28 +12634,24 @@ The data in table \#8.3.2 are the life expectancies for all people in European c
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{expect, }\DataTypeTok{data=}\NormalTok{Expectancy_male)}
+\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{expect, }\DataTypeTok{data=}\NormalTok{Expectancy_male, }\DataTypeTok{title=}\StringTok{"Life Expectancy of a male"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/expectancy-male8-density-1.pdf}
-\caption{\label{fig:expectancy-male8-density}(ref:expactancy-male8-density-cap)}
+\includegraphics{Statistics_using_technology_files/figure-latex/expectancy-male8-density-1} \caption{(ref:expactancy-male8-density-cap)}\label{fig:expectancy-male8-density}
 \end{figure}
 
 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{expect, }\DataTypeTok{data=}\NormalTok{Expectancy_male)}
+\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{expect, }\DataTypeTok{data=}\NormalTok{Expectancy_male, }\DataTypeTok{title=}\StringTok{"Male Life Expectancy"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/expectancy-male8-qq-1.pdf}
-\caption{\label{fig:expectancy-male8-qq}Normal Quntile Plot of Life Expectancies of Males in Europe in 2000}
+\includegraphics{Statistics_using_technology_files/figure-latex/expectancy-male8-qq-1} \caption{Normal Quntile Plot of Life Expectancies of Males in Europe in 2000}\label{fig:expectancy-male8-qq}
 \end{figure}
 
 This sample does not appear to come from a population that is normally distributed. This sample is moderate to large, so it is good that the t-test is robust.
@@ -12781,7 +12674,7 @@ On R Studio, the command would be
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  expect
 ## t = 90.919, df = 52, p-value < 2.2e-16
@@ -12804,8 +12697,8 @@ Sample statistic is 70.68 years, and the confidence interval is \(68.60071<\mu<7
   Real World Interpretation: The mean life expectancy of European men is between 68.60 and 72.76 years.
 \end{enumerate}
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-21}{%
+\subsection{Homework}\label{homework-21}}
 
 ** In each problem show all steps of the confidence interval. If some of the assumptions are not met, note that the results of the interval may not be correct and then continue the process of the confidence interval.**
 
@@ -13369,6 +13262,32 @@ SOCR Data 2008 World CountriesRankings. (n.d.). Retrieved July 19, 2019, from \u
 
 Maintaining Balance while Concentrating. (n.d.). Retrieved July 19, 2019, from \url{http://www.statsci.org/data/general/balaconc.html}
 
+\begin{verbatim}
+## -- Attaching packages ------------------- tidyverse 1.3.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v tibble  3.1.3     v purrr   0.3.4
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   2.0.0     v forcats 0.5.1
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ---------------------- tidyverse_conflicts() --
+## x mosaicCore::count()        masks mosaic::count(), dplyr::count()
+## x purrr::cross()             masks mosaic::cross()
+## x mosaic::do()               masks dplyr::do()
+## x tidyr::expand()            masks Matrix::expand()
+## x dplyr::filter()            masks stats::filter()
+## x ggstance::geom_errorbarh() masks ggplot2::geom_errorbarh()
+## x dplyr::lag()               masks stats::lag()
+## x tidyr::pack()              masks Matrix::pack()
+## x MASS::select()             masks dplyr::select()
+## x mosaic::stat()             masks ggplot2::stat()
+## x mosaicCore::tally()        masks mosaic::tally(), dplyr::tally()
+## x tidyr::unpack()            masks Matrix::unpack()
+\end{verbatim}
+
 \hypertarget{two-sample-inference}{%
 \chapter{Two-Sample Inference}\label{two-sample-inference}}
 
@@ -13576,8 +13495,8 @@ On R use the command:
 
 \begin{verbatim}
 ## 
-## 	2-sample test for equality of proportions with
-## 	continuity correction
+##  2-sample test for equality of proportions with
+##  continuity correction
 ## 
 ## data:  c out of c231 out of 1000176 out of 1200
 ## X-squared = 25.173, df = 1, p-value = 5.241e-07
@@ -13653,8 +13572,8 @@ On R use the command:
 
 \begin{verbatim}
 ## 
-## 	2-sample test for equality of proportions with
-## 	continuity correction
+##  2-sample test for equality of proportions with
+##  continuity correction
 ## 
 ## data:  c out of c231 out of 1000176 out of 1200
 ## X-squared = 25.173, df = 1, p-value = 5.241e-07
@@ -13675,8 +13594,8 @@ On R use the command:
   Real World Interpretation: The proportion of husbands who cheat on their wives is anywhere from 5.05\% to 11.82\% higher than the proportion of wives who cheat on their husband.
 \end{enumerate}
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-22}{%
+\subsection{Homework}\label{homework-22}}
 
 \textbf{In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.}
 
@@ -14103,17 +14022,13 @@ Now create a density plot and normal quantile plot on the difference variable.
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/pulse9-female-density-1.pdf}
-\caption{\label{fig:pulse9-female-density}Density Plot of Differences in pulse rates}
+\includegraphics{Statistics_using_technology_files/figure-latex/pulse9-female-density-1} \caption{Density Plot of Differences in pulse rates}\label{fig:pulse9-female-density}
 \end{figure}
 
 
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/pulse9-female-qq-1.pdf}
-\caption{\label{fig:pulse9-female-qq}Normal Quantile Plot of Differences in Weights}
+\includegraphics{Statistics_using_technology_files/figure-latex/pulse9-female-qq-1} \caption{Normal Quantile Plot of Differences in Weights}\label{fig:pulse9-female-qq}
 \end{figure}
 
 The density plot is not symmetrical and the normal quantile plot on the differences is not linear.
@@ -14136,7 +14051,7 @@ So you cannot assume that the distribution of the difference in pulse rates is n
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  difference
 ## t = 4.1353, df = 26, p-value = 0.0003283
@@ -14281,28 +14196,24 @@ level of significance, \(\alpha=0.05\)
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{difference, }\DataTypeTok{data=}\NormalTok{Helmet_new)}
+\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{difference, }\DataTypeTok{data=}\NormalTok{Helmet_new, }\DataTypeTok{title=}\StringTok{"Differences in Head Measurements"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/helmet9-new-denstiy-1.pdf}
-\caption{\label{fig:helmet9-new-denstiy}Desnity Plot of Differences in Head Measurements}
+\includegraphics{Statistics_using_technology_files/figure-latex/helmet9-new-denstiy-1} \caption{Desnity Plot of Differences in Head Measurements}\label{fig:helmet9-new-denstiy}
 \end{figure}
 
 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{difference, }\DataTypeTok{data=}\NormalTok{Helmet_new)}
+\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{difference, }\DataTypeTok{data=}\NormalTok{Helmet_new, }\DataTypeTok{title=}\StringTok{"Differences in Head Measurements"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/helmet9-new-qq-1.pdf}
-\caption{\label{fig:helmet9-new-qq}Normal Quantile Plot of Differences in Head Measurements}
+\includegraphics{Statistics_using_technology_files/figure-latex/helmet9-new-qq-1} \caption{Normal Quantile Plot of Differences in Head Measurements}\label{fig:helmet9-new-qq}
 \end{figure}
 
 This density plot looks somewhat bell shaped. The normal quantile plot on the differences looks somewhat linear. So you can assume that the distribution of the difference in weights is normal.
@@ -14325,7 +14236,7 @@ Using R Studio the command is
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  difference
 ## t = 3.1854, df = 17, p-value = 0.005415
@@ -14423,7 +14334,7 @@ Using R Studio the command is
 
 \begin{verbatim}
 ## 
-## 	One Sample t-test
+##  One Sample t-test
 ## 
 ## data:  difference
 ## t = 3.1854, df = 17, p-value = 0.005415
@@ -14446,8 +14357,8 @@ Using R Studio the command is
 
 Examples \#9.2.2 and \#9.2.4 use the same data set, but one is conducting a hypothesis test and the other is conducting a confidence interval. Notice that the hypothesis test's conclusion was to reject and say that there was a difference in the means, and the confidence interval does not contain the number 0. If the confidence interval did contain the number 0, then that would mean that the two means could be the same. Since the interval did not contain 0, then you could say that the means are different just as in the hypothesis test. This means that the hypothesis test and the confidence interval can produce the same interpretation. Do be careful though, you can run a hypothesis test with a particular significance level and a confidence interval with a confidence level that is not compatible with your significance level. This will mean that the conclusion from the confidence interval would not be the same as with a hypothesis test. So if you want to estimate the mean difference, then conduct a confidence interval. If you want to show that the means are different, then conduct a hypothesis test. As a reminder, the American Statistical Association (ASA) suggests not conducting hypothesis tests and just create confidence intervals.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-23}{%
+\subsection{Homework}\label{homework-23}}
 
 \textbf{In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.}
 
@@ -15017,14 +14928,15 @@ level of significance, \(\alpha=0.05\)
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{TotChol}\OperatorTok{|}\NormalTok{Diabetes, }\DataTypeTok{data=}\NormalTok{NHANES)}
+\NormalTok{NHANES_no_NA<-}
+\StringTok{  }\NormalTok{NHANES }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{drop_na}\NormalTok{(Diabetes)}
+\KeywordTok{gf_density}\NormalTok{(}\OperatorTok{~}\NormalTok{TotChol}\OperatorTok{|}\NormalTok{Diabetes, }\DataTypeTok{data=}\NormalTok{NHANES_no_NA)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES9-diabetes-density-1.pdf}
-\caption{\label{fig:NHANES9-diabetes-density}Density Plot of Cholesterol levels of people with and without Diabetes:}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES9-diabetes-density-1} \caption{Density Plot of Cholesterol levels of people with and without Diabetes:}\label{fig:NHANES9-diabetes-density}
 \end{figure}
 
 Both the yes group and the no group look somewhat bell shaped.
@@ -15033,14 +14945,12 @@ Both the yes group and the no group look somewhat bell shaped.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{TotChol}\OperatorTok{|}\NormalTok{Diabetes, }\DataTypeTok{data=}\NormalTok{NHANES)}
+\KeywordTok{gf_qq}\NormalTok{(}\OperatorTok{~}\NormalTok{TotChol}\OperatorTok{|}\NormalTok{Diabetes, }\DataTypeTok{data=}\NormalTok{NHANES_no_NA)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/NHANES9-diabetes-qq-1.pdf}
-\caption{\label{fig:NHANES9-diabetes-qq}Normal Quantile Plot of Cholesterol Levels of people with and without Diabetes}
+\includegraphics{Statistics_using_technology_files/figure-latex/NHANES9-diabetes-qq-1} \caption{Normal Quantile Plot of Cholesterol Levels of people with and without Diabetes}\label{fig:NHANES9-diabetes-qq}
 \end{figure}
 
 Both the yes group and the no group look somewhat linear.
@@ -15065,7 +14975,7 @@ The variable is cholesterol (TotChol) and separating based on if a person has di
 
 \begin{verbatim}
 ## 
-## 	Welch Two Sample t-test
+##  Welch Two Sample t-test
 ## 
 ## data:  TotChol by Diabetes
 ## t = 2.4286, df = 809.7, p-value = 0.01537
@@ -15141,7 +15051,7 @@ The variable is cholesterol (TotChol) and separating based on if a person has di
 
 \begin{verbatim}
 ## 
-## 	Welch Two Sample t-test
+##  Welch Two Sample t-test
 ## 
 ## data:  TotChol by Diabetes
 ## t = 2.4286, df = 809.7, p-value = 0.01537
@@ -15268,9 +15178,7 @@ level of significance: \(\alpha=0.05\)
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/hotdog9-density-1.pdf}
-\caption{\label{fig:hotdog9-density}Density Plot of Sodium Levels in Hotdogs}
+\includegraphics{Statistics_using_technology_files/figure-latex/hotdog9-density-1} \caption{(ref:hotdog9-desnity-cap)}\label{fig:hotdog9-density}
 \end{figure}
 
 The density plot for beef hotdogs looks somewhat bell shaped, but the density plot for poultry hotdogs does not look bell shaped.
@@ -15284,9 +15192,7 @@ The density plot for beef hotdogs looks somewhat bell shaped, but the density pl
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/hotdog9-qq-1.pdf}
-\caption{\label{fig:hotdog9-qq}Normal Quantile Plot of Sodium Levels in Hotdogs}
+\includegraphics{Statistics_using_technology_files/figure-latex/hotdog9-qq-1} \caption{Normal Quantile Plot of Sodium Levels in Hotdogs}\label{fig:hotdog9-qq}
 \end{figure}
 
 The normal quantile plot for the sodium level in beef hotdogs looks somewhat linear. The normal quantile plot for the sodium level in poultry hotdogs does not look linear. The population of all sodium levels in beef hotdogs may be normally distributed, but the population of all sodium levels in poultry hotdogs is probably not normally distributed. The sample size is not very large so the results of the test may not be valid. A larger sample would be a good idea.
@@ -15309,7 +15215,7 @@ Using R Studio the variable is sodium levels (sodium) in different types of hot 
 
 \begin{verbatim}
 ## 
-## 	Welch Two Sample t-test
+##  Welch Two Sample t-test
 ## 
 ## data:  sodium by type
 ## t = -1.8798, df = 34.983, p-value = 0.06848
@@ -15368,7 +15274,7 @@ The assumptions were stated and checked in example \#9.3.3.
 
 \begin{verbatim}
 ## 
-## 	Welch Two Sample t-test
+##  Welch Two Sample t-test
 ## 
 ## data:  sodium by type
 ## t = -1.8798, df = 34.983, p-value = 0.06848
@@ -15391,8 +15297,8 @@ The assumptions were stated and checked in example \#9.3.3.
 
 Do realize that the population assumptions is not valid, so this interpretation may be invalid.
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-24}{%
+\subsection{Homework}\label{homework-24}}
 
 \textbf{In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.}
 
@@ -15768,9 +15674,7 @@ State random variables
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/beer10-point-1.pdf}
-\caption{\label{fig:beer10-point}Scatter Plot of Calories in Beer versus Alcohol Content}
+\includegraphics{Statistics_using_technology_files/figure-latex/beer10-point-1} \caption{Scatter Plot of Calories in Beer versus Alcohol Content}\label{fig:beer10-point}
 \end{figure}
 
 This scatter plot looks fairly linear.
@@ -15787,9 +15691,7 @@ To find the equation for the linear relationship, the process of regression is u
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/beer10-point-lm-1.pdf}
-\caption{\label{fig:beer10-point-lm}Scatter Plot of Beer Data with Regression Line}
+\includegraphics{Statistics_using_technology_files/figure-latex/beer10-point-lm-1} \caption{Scatter Plot of Beer Data with Regression Line}\label{fig:beer10-point-lm}
 \end{figure}
 
 \textbf{The find the regression equation (also known as best fitting line or least squares line)}
@@ -16022,9 +15924,7 @@ Now graph the residuals to see if there is any pattern to the residuals. The com
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/Beer10-point-residuals-1.pdf}
-\caption{\label{fig:Beer10-point-residuals}Residual Plot of Beer Data}
+\includegraphics{Statistics_using_technology_files/figure-latex/Beer10-point-residuals-1} \caption{Residual Plot of Beer Data}\label{fig:Beer10-point-residuals}
 \end{figure}
 
 The residual versus the \emph{x-}values plot looks fairly random.
@@ -16082,15 +15982,13 @@ On last thing to look at here, is that you may wonder if import beer has a diffe
 \end{Shaded}
 
 \begin{figure}
-\centering
-\includegraphics{Statistics_using_technology_files/figure-latex/Beer10a-point-lm-1.pdf}
-\caption{\label{fig:Beer10a-point-lm}Calories versus Alcohol Content Separated by Location of Beer Data}
+\includegraphics{Statistics_using_technology_files/figure-latex/Beer10a-point-lm-1} \caption{Calories versus Alcohol Content Separated by Location of Beer Data}\label{fig:Beer10a-point-lm}
 \end{figure}
 
 Looking at the scatter plot, there doesn't appear to be an affect from domestic or import. This is what is nice about scatter plots, You can visually see a possible relationships.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-25}{%
+\subsection{Homework}\label{homework-25}}
 
 ** For each problem, state the random variables. The Data Frame in this section are used
 in the homework for sections 10.2 and 10.3 also. **
@@ -16695,7 +16593,7 @@ For this example this is
 ## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 17.62 on 225 degrees of freedom
-## Multiple R-squared:  0.8164,	Adjusted R-squared:  0.8156 
+## Multiple R-squared:  0.8164, Adjusted R-squared:  0.8156 
 ## F-statistic:  1001 on 1 and 225 DF,  p-value: < 2.2e-16
 \end{verbatim}
 
@@ -16759,8 +16657,8 @@ Just because there is positive correlation doesn't mean that one caused the othe
 
 Remember a correlation only means a pattern exists. It does not mean that one variable causes the other variable to change.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-26}{%
+\subsection{Homework}\label{homework-26}}
 
 \textbf{For each problem, state the random variables.The Data Frame in this section are in section 10.1 and will be used in section 10.3.}
 
@@ -16934,7 +16832,7 @@ First save the linear model with a name like lm.out. Then use summary(lm.out) to
 ## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 17.62 on 225 degrees of freedom
-## Multiple R-squared:  0.8164,	Adjusted R-squared:  0.8156 
+## Multiple R-squared:  0.8164, Adjusted R-squared:  0.8156 
 ## F-statistic:  1001 on 1 and 225 DF,  p-value: < 2.2e-16
 \end{verbatim}
 
@@ -17137,7 +17035,7 @@ The command on R Studio is
 ## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 17.62 on 225 degrees of freedom
-## Multiple R-squared:  0.8164,	Adjusted R-squared:  0.8156 
+## Multiple R-squared:  0.8164, Adjusted R-squared:  0.8156 
 ## F-statistic:  1001 on 1 and 225 DF,  p-value: < 2.2e-16
 \end{verbatim}
 
@@ -17163,8 +17061,8 @@ Reject \(H_o\) since the p-value is less than 0.05.
 
 There is enough evidence to show that there is a correlation and linear relationship between alcohol content and number of calories in a 12-ounce bottle of beer.
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-27}{%
+\subsection{Homework}\label{homework-27}}
 
 ** For each problem, state the random variables. The Data Frame in this section are in the homework for section 10.1 and were also used in section 10.2.**
 
@@ -17543,7 +17441,7 @@ where {[},1{]} represents number of mothers who did not breast feed, {[},2{]} re
 
 \begin{verbatim}
 ## 
-## 	Pearson's Chi-squared test
+##  Pearson's Chi-squared test
 ## 
 ## data:  table
 ## X-squared = 11.217, df = 3, p-value = 0.01061
@@ -17583,8 +17481,8 @@ Fail to reject \(H_o\) since the p-value is more than 0.01.
 
 There is not enough evidence to support that breastfeeding and autism are dependent. This means that you cannot say whether a child is breastfed or not will indicate if that the child will be diagnosed with autism.
 
-\hypertarget{homework}{%
-\subsection{Homework}\label{homework}}
+\hypertarget{homework-28}{%
+\subsection{Homework}\label{homework-28}}
 
 \textbf{In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.}
 
@@ -17972,7 +17870,7 @@ On R Studio, this would be
 
 \begin{verbatim}
 ## 
-## 	Chi-squared test for given probabilities
+##  Chi-squared test for given probabilities
 ## 
 ## data:  observed
 ## X-squared = 1.504, df = 5, p-value = 0.9126
@@ -18011,8 +17909,8 @@ Fail to reject \(H_o\) since the p-value is greater than 0.05.
 
 There is not enough evidence to support that the die is not consistent with the distribution for a fair die. There is not enough evidence to support that the die is not fair.
 
-\hypertarget{homework-1}{%
-\subsection{Homework}\label{homework-1}}
+\hypertarget{homework-29}{%
+\subsection{Homework}\label{homework-29}}
 
 ** In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.**
 
@@ -18371,8 +18269,8 @@ There is enough evidence to support that at least two of the mean survival times
 
 By examination of the means, it appears that the mean survival time for breast cancer is different from the mean survival times for both stomach and bronchus cancers. It may also be different for the mean survival time for colon cancer. The others may not be different enough to actually say for sure.
 
-\hypertarget{homework-2}{%
-\subsection{Homework}\label{homework-2}}
+\hypertarget{homework-30}{%
+\subsection{Homework}\label{homework-30}}
 
 \textbf{In each problem show all steps of the hypothesis test. If some of the assumptions are not met, note that the results of the test may not be correct and then continue the process of the hypothesis test.}
 
