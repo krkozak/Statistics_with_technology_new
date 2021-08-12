@@ -52,7 +52,7 @@ One last thing to know about confidence is how the sample size and confidence le
 Think about shooting an arrow into the target. Suppose you are really good at that and that you have a 90% chance of hitting the bull's eye. Now the bull's eye is very small. Since you hit the bull's eye
 approximately 90% of the time, then you probably hit inside the next ring out 95% of the time. You have a better chance of doing this, but the circle is bigger. You probably have a 99% chance of hitting the target, but that is a much bigger circle to hit. You can see, as your confidence in hitting the target increases, the circle you hit gets bigger. The same is true for confidence intervals. This is demonstrated in figure \#8.1.1.
 
-```{r, include=FALSE, fig.alt="Graph showing that 90% confident interval is narrower than a 95% confident interval, which is narrower than a 99% confidence interval"}
+```{r, echo=FALSE, fig.alt="Graph showing that 90% confident interval is narrower than a 95% confident interval, which is narrower than a 99% confidence interval"}
 knitr::include_graphics("effect_confidence_level.png")
 ```
 
@@ -61,7 +61,7 @@ The higher level of confidence makes a wider interval. There's a trade off betwe
 
 Now look at how the sample size affects the size of the interval. Suppose figure \#8.1.2 represents confidence intervals calculated on a 95% interval. A larger sample size from a representative sample makes the width of the interval narrower. This makes sense. Large samples are closer to the true population so the point estimate is pretty close to the true value.
 
-```{r, include=FALSE, fig.alt="Graph showing that a confident interval created with a sample size of 30 is wider than a confident interval created with a sample size of 100, which is wider than a confidence interval created with a sample size of 1000."}
+```{r, echo=FALSE, fig.alt="Graph showing that a confident interval created with a sample size of 30 is wider than a confident interval created with a sample size of 100, which is wider than a confidence interval created with a sample size of 1000."}
 knitr::include_graphics("effect_sample_size.png")
 ```
 

@@ -131,7 +131,7 @@ Approximately 99.7% of the data is within three standard deviations of the mean.
 
 **Image \#6.1: Empirical Rule**
 
-```{r, include=FALSE, fig.alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations"}
+```{r, echo=FALSE, fig.alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations"}
 knitr::include_graphics("Empirical_rule.png")
 ```
 

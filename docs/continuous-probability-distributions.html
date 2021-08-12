@@ -470,6 +470,7 @@ Approximately 99.7% of the data is within three standard deviations of the mean.
 <p><strong><br />
 </strong></p>
 <p><strong>Image #6.1: Empirical Rule</strong></p>
+<p><img src="Empirical_rule.png" title="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations" alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations" width="469" /></p>
 <p>Be careful, there is still some area left over in each end. Remember, the maximum a probability can be is 100%, so if you calculate you will see that for both ends together there is 0.3% of the curve. Because of
 symmetry, you can divide this equally between both ends and find that there is 0.15% in each tail beyond the 3rd standard deviations.</p>
 <p><strong><br />
@@ -999,18 +1000,18 @@ Figure 6.20: Distribution of Pulse Rate
 <div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="continuous-probability-distributions.html#cb284-1"></a>NHANES<span class="op">%&gt;%</span></span>
 <span id="cb284-2"><a href="continuous-probability-distributions.html#cb284-2"></a><span class="st">  </span><span class="kw">sample_n</span>(<span class="dt">size=</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 10 × 76
-##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1  
-##    &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;  
-##  1 61076 2009_10  female    15 &quot; 10-19&quot;        187 Black  
-##  2 55250 2009_10  female    24 &quot; 20-29&quot;        296 White  
-##  3 64612 2011_12  female    11 &quot; 10-19&quot;         NA Black  
-##  4 60787 2009_10  female    31 &quot; 30-39&quot;        381 White  
-##  5 68622 2011_12  female    70 &quot; 70+&quot;           NA White  
-##  6 63267 2011_12  female    72 &quot; 70+&quot;           NA White  
-##  7 55359 2009_10  male      28 &quot; 20-29&quot;        341 Black  
-##  8 67689 2011_12  female    18 &quot; 10-19&quot;         NA Mexican
-##  9 55460 2009_10  male      32 &quot; 30-39&quot;        393 White  
-## 10 63621 2011_12  female    61 &quot; 60-69&quot;         NA White  
+##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1   
+##    &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;   
+##  1 68690 2011_12  female    29 &quot; 20-29&quot;         NA Other   
+##  2 64151 2011_12  male      21 &quot; 20-29&quot;         NA White   
+##  3 55105 2009_10  female    22 &quot; 20-29&quot;        274 Hispanic
+##  4 53222 2009_10  female    63 &quot; 60-69&quot;        766 Hispanic
+##  5 61166 2009_10  female    38 &quot; 30-39&quot;        459 White   
+##  6 67569 2011_12  male       7 &quot; 0-9&quot;           NA White   
+##  7 60933 2009_10  male      42 &quot; 40-49&quot;        505 Mexican 
+##  8 54825 2009_10  male      40 &quot; 40-49&quot;        480 White   
+##  9 66113 2011_12  male      40 &quot; 40-49&quot;         NA White   
+## 10 60139 2009_10  male      16 &quot; 10-19&quot;        197 White   
 ## # … with 69 more variables: Race3 &lt;fct&gt;, Education &lt;fct&gt;,
 ## #   MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;,
 ## #   Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
@@ -1038,8 +1039,8 @@ Figure 6.20: Distribution of Pulse Rate
 ## #   SexNumPartYear &lt;int&gt;, SameSex &lt;fct&gt;,
 ## #   SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
 <p>It might be useful to find the mean pulse rate from a random sample of size 10.</p>
-<pre><code>##   response mean
-## 1    Pulse   70</code></pre>
+<pre><code>##   response  mean
+## 1    Pulse 70.25</code></pre>
 <p>Now suppose you took another random sample of size 10 and found the mean pulse rate for that sample. Repeat this process 100 times. At this point you would basically have a new sample of 100 mean pulse rates. You could assess how this sample is distributed by creating a density plot.</p>
 
 <div class="figure"><span id="fig:NHANES6e-density"></span>
@@ -1049,7 +1050,7 @@ Figure 6.21: Density Plot of Sample Means When <em>n</em> = 10
 </p>
 </div>
 <pre><code>##   response     mean       sd
-## 1    means 73.15429 4.277771</code></pre>
+## 1    means 73.41407 4.849207</code></pre>
 <p>This distribution is a sampling distribution. That is all a sampling distribution is. It is a distribution created from statistics.</p>
 <p>Notice the distribution does look a great deal like the distribution of the original random variable. Notice the mean of the sample means <span class="math inline">\(\mu_{\bar{x}} = 73.8\)</span> bpm which is almost the same of as the mean of the population. The standard deviation of the sample means, <span class="math inline">\(\sigma_{\bar{x}}=4.35\)</span> pbm is about <span class="math inline">\(\frac{1}{3}\)</span> of the population standard deviation.</p>
 <p>What does this distribution look like if instead of repeating the experiment 10 times you repeat it 50 times instead?</p>
@@ -1062,7 +1063,7 @@ Figure 6.22: Density Plot of Sample Means When <em>n</em> = 50
 </p>
 </div>
 <pre><code>##   response     mean       sd
-## 1    means 73.62275 1.920975</code></pre>
+## 1    means 73.41118 1.797519</code></pre>
 <p>Notice this density plot of the sample mean looks approximately symmetrical and could almost be called normal. Notice, the mean of the sample means is 73.6 bpm which is approximately what the population mean is. The standard deviation of the sample means is 1.77 bpm which is around <span class="math inline">\(\frac{1}{7}\)</span> of the population standard deviation. What if you keep increasing <em>n</em>? What will the sampling distribution of the sample mean look like? In other words, what does the sampling distribution of <span class="math inline">\(\bar{x}\)</span> look like as <em>n</em> gets even larger?</p>
 <p>This depends on how the original distribution is distributed. In Example #6.3.1, the random variable was approximately normally distributed. When <em>n</em> was 10, the distribution of the mean looked approximately normal. What if the original distribution wasn’t normal? How big would <em>n</em> have to be? Consider a different variable in the NHANES data frame that isn’t normally distributed such as age when a participant started to smoke cigarettes (SmokeAge). The density plot for the large sample is in (Figure <a href="continuous-probability-distributions.html#fig:NHANES6g-density">6.23</a>). The mean for the large sample is 17.8 years and the standard deviation is 5.3 years, so <span class="math inline">\(\mu=17.8\)</span> dollars and <span class="math inline">\(\sigma=5.3\)</span> dollars approximately.</p>
 
@@ -1076,8 +1077,8 @@ Figure 6.23: Distribution of Age when Started to Smoke
 ## 1 SmokeAge 17.82662 5.32666</code></pre>
 <p>Now take 100 samples of size 50 individuals from the NHANES Data Frame. Then graph a density plot of SmokeAge. Notice the the sampling distribution of the sample means looks fairly normally distributed even though the original random variable was not normally distributed. The mean of the sample mean. <span class="math inline">\(\mu_{ \bar{x}}=\)</span> 17.8 years and the standard deviation of the sample mean, <span class="math inline">\(\sigma_{\bar{x}}=\)</span> 1.56 years. The mean of the sample mean is the same as the mean of the population, but the standard deviation of the sample mean is much less than the standard deviation of the original data.</p>
 <p><img src="Statistics_using_technology_files/figure-html/NHANES6-random-1.png" title="Density plot of mean age a person starts to smoke of a sample of size 50. Appears to be bell shapped." alt="Density plot of mean age a person starts to smoke of a sample of size 50. Appears to be bell shapped." width="672" /></p>
-<pre><code>##   response     mean       sd
-## 1    means 17.88765 1.521109</code></pre>
+<pre><code>##   response     mean     sd
+## 1    means 17.63474 1.2595</code></pre>
 <p>Once question is, why is the mean of the sample means the same as the mean of the population? Suppose you have a random variable that has a population mean, <span class="math inline">\(\mu\)</span>, and a population standard deviation, <span class="math inline">\(\sigma\)</span>. If a sample of size <em>n</em> is taken, then the sample mean, has a mean <span class="math inline">\(\mu_{ \bar{x}}=\mu\)</span> and standard deviation of <span class="math inline">\(\sigma_{ \bar{x}}=\frac{\sigma}{\sqrt{n}}\)</span> . The standard deviation of the sample mean is lower because by taking the mean you are averaging out the extreme values, which makes the distribution of the sample mean less spread out.</p>
 <p>You now know the center and the variability of <span class="math inline">\(\bar{x}\)</span>. You also want to know the shape of the distribution of <span class="math inline">\(\bar{x}\)</span>. You hope it is normal, since you know how to find probabilities using the normal curve. The following theorem tells you the requirement to have <span class="math inline">\(\bar{x}\)</span> be normally distributed.</p>
 <p><strong>Theorem #6.3.1: Central Limit Theorem.</strong></p>

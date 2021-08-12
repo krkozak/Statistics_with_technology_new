@@ -444,10 +444,7 @@ To find with RStudio, perform the command:</p>
 <p>Then click on MASS::cats.</p>
 <p>The output looks like:</p>
 <p><strong>Image #3.1.1: Code book for cats data frame</strong></p>
-<div class="figure">
-<img src="code_book_cats.jpg" alt="" />
-<p class="caption">Code book for cats data</p>
-</div>
+<p><img src="code_book_cats.jpg" title="Code book for the dataset cats in the package MASS. This code book is available using the command ??cat. It would describe the variables of Sex (sex of cat), Bwt (body weight of cat), Hwt (height of weight)." alt="Code book for the dataset cats in the package MASS. This code book is available using the command ??cat. It would describe the variables of Sex (sex of cat), Bwt (body weight of cat), Hwt (height of weight)." width="563" /></p>
 <p>Suppose you want to know if male cats weight more than female cats. Looking at the variables, you notice that there is a variable for the sex of the cat. You can look at the weights of males and females separately. This looks like:</p>
 <p><strong>Solution:</strong>
 To find the mean and median, separated by sex, use this command in RStudio:</p>
@@ -489,6 +486,7 @@ The command in RStudio for finding the minimum and maximum is very similar to ho
 <p>Why use the mean instead of the median? The reason is because when multiple samples are taken from the same population, the sample means tend to be more consistent than other measures of the center.</p>
 <p>To understand how the different measures of center related to skewed or symmetric distributions, see Graph #3.1.2. As you can see sometimes the mean is smaller than the median, sometimes the mean is larger than the median, and sometimes they are the same values.</p>
 <p><strong>Graph #3.1.2: Mean, Median, Mode as Related to a Distribution</strong></p>
+<p><img src="centers_distribution.jpg" title="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines" alt="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines" width="448" /></p>
 <p>One last type of average is a weighted average. <strong>Weighted averages</strong> are used quite often in different situations. Some teachers use them in calculating a student’s grade in the course, or a grade on a project. Some employers use them in employee evaluations. The idea is that some activities are more
 important than others. As an example, a full time teacher at a community college may be evaluated on their service to the college, their service to the community, whether their paperwork is turned in on time, and their teaching. However, teaching is much more important than whether their paperwork is turned in on time. When the evaluation is completed, more weight needs to be given to the teaching and less to the paperwork. This is a weighted average.</p>
 <p><strong>Weighted Average</strong>
@@ -667,10 +665,12 @@ John Matic (2013)</p>
 <li>Looking at graph #3.1.1, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?</li>
 </ol>
 <p><strong>Graph #3.1.1: Skewed or Symmetric Graph</strong></p>
+<p><img src="graph_3_1_1.jpg" title="histogram with bars on left tallest and then gradually getting shorter as you go to the right" alt="histogram with bars on left tallest and then gradually getting shorter as you go to the right" width="376" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Looking at graph #3.1.2, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?</li>
 </ol>
 <p><strong>Graph #3.1.2: Skewed or Symmetric Graph</strong></p>
+<p><img src="graph_3_1_1.png" title="histogram with bars on left shortest and then gradually getting taller as you go to the right" alt="histogram with bars on left shortest and then gradually getting taller as you go to the right" width="376" /></p>
 <ol start="7" style="list-style-type: decimal">
 <li><p>An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward the goals, job effectiveness, competencies, and CCC core values. Suppose for a specific employee, goal 1 has a weight of 30%, goal 2 has a weight of 20%, job effectiveness has a weight of 25%, competency 1 has a weight of 4%, competency 2 has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 3%, competency 5 has a weight of 2%, and core values has a weight of 10%. Suppose the employee has scores of 3.0 for goal 1, 3.0 for goal 2, 2.0 for job effectiveness, 3.0 for competency 1, 2.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, 4.0 for competency 5, and 3.0 for core values. Find the weighted average score for this employee. If an employee has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?</p></li>
 <li><p>An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward goals, job effectiveness, competencies, CCC core values. Suppose for a specific employee, goal 1 has a weight of 20%, goal 2 has a weight of 20%, goal 3 has a weight of 10%, job effectiveness has a weight of 25%, competency 1 has a weight of 4%, competency 2 has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 5%, and core values has a weight of 10%. Suppose the employee has scores of 2.0 for goal 1, 2.0 for goal 2, 4.0 for goal 3, 3.0 for job effectiveness, 2.0 for competency 1, 3.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, and 4.0 for core values. Find the weighted average score for this employee. If an employee that has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?</p></li>

@@ -99,7 +99,10 @@ The output looks like:
 
 **Image \#3.1.1: Code book for cats data frame**
 
-![Code book for cats data](code_book_cats.jpg)
+```{r, echo=FALSE, fig.alt="Code book for the dataset cats in the package MASS. This code book is available using the command ??cat. It would describe the variables of Sex (sex of cat), Bwt (body weight of cat), Hwt (height of weight)."}
+knitr::include_graphics("code_book_cats.jpg")
+```
+
 
 Suppose you want to know if male cats weight more than female cats. Looking at the variables, you notice that there is a variable for the sex of the cat. You can look at the weights of males and females separately. This looks like:  
 
@@ -173,8 +176,8 @@ To understand how the different measures of center related to skewed or symmetri
 
 **Graph \#3.1.2: Mean, Median, Mode as Related to a Distribution**
 
-```{r, include=FALSE, fig.alt="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines"}
-knitr::include_graphics("centers_distribution.png")
+```{r, echo= FALSE, fig.alt="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines"}
+knitr::include_graphics("centers_distribution.jpg")
 ```
 
 
@@ -404,8 +407,8 @@ e.  If it is your job to find places in the budget to reduce costs, which averag
 
  **Graph \#3.1.1: Skewed or Symmetric Graph**
 
-```{r, include=FALSE,fig.alt="histogram with bars on left tallest and then gradually getting shorter as you go to the right"}
-knitr::include_graphics("graph_3_1_1.png")
+```{r, echo=FALSE,fig.alt="histogram with bars on left tallest and then gradually getting shorter as you go to the right"}
+knitr::include_graphics("graph_3_1_1.jpg")
 ```
 
 
@@ -413,7 +416,7 @@ knitr::include_graphics("graph_3_1_1.png")
 
  **Graph \#3.1.2: Skewed or Symmetric Graph**
  
-```{r, include=FALSE, fig.alt="histogram with bars on left shortest and then gradually getting taller as you go to the right"}
+```{r, echo=FALSE, fig.alt="histogram with bars on left shortest and then gradually getting taller as you go to the right"}
 knitr::include_graphics("graph_3_1_1.png")
 ```
 

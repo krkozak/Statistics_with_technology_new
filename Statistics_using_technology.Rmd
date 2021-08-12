@@ -1932,7 +1932,10 @@ The output looks like:
 
 **Image \#3.1.1: Code book for cats data frame**
 
-![Code book for cats data](code_book_cats.jpg)
+```{r, echo=FALSE, fig.alt="Code book for the dataset cats in the package MASS. This code book is available using the command ??cat. It would describe the variables of Sex (sex of cat), Bwt (body weight of cat), Hwt (height of weight)."}
+knitr::include_graphics("code_book_cats.jpg")
+```
+
 
 Suppose you want to know if male cats weight more than female cats. Looking at the variables, you notice that there is a variable for the sex of the cat. You can look at the weights of males and females separately. This looks like:  
 
@@ -2006,8 +2009,8 @@ To understand how the different measures of center related to skewed or symmetri
 
 **Graph \#3.1.2: Mean, Median, Mode as Related to a Distribution**
 
-```{r, include=FALSE, fig.alt="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines"}
-knitr::include_graphics("centers_distribution.png")
+```{r, echo= FALSE, fig.alt="skewed left graph with mean, median,mode lines, then symmetric graph with all three the same line, then skewed right graph with mode, median, mean lines"}
+knitr::include_graphics("centers_distribution.jpg")
 ```
 
 
@@ -2237,8 +2240,8 @@ e.  If it is your job to find places in the budget to reduce costs, which averag
 
  **Graph \#3.1.1: Skewed or Symmetric Graph**
 
-```{r, include=FALSE,fig.alt="histogram with bars on left tallest and then gradually getting shorter as you go to the right"}
-knitr::include_graphics("graph_3_1_1.png")
+```{r, echo=FALSE,fig.alt="histogram with bars on left tallest and then gradually getting shorter as you go to the right"}
+knitr::include_graphics("graph_3_1_1.jpg")
 ```
 
 
@@ -2246,7 +2249,7 @@ knitr::include_graphics("graph_3_1_1.png")
 
  **Graph \#3.1.2: Skewed or Symmetric Graph**
  
-```{r, include=FALSE, fig.alt="histogram with bars on left shortest and then gradually getting taller as you go to the right"}
+```{r, echo=FALSE, fig.alt="histogram with bars on left shortest and then gradually getting taller as you go to the right"}
 knitr::include_graphics("graph_3_1_1.png")
 ```
 
@@ -4831,7 +4834,7 @@ Approximately 99.7% of the data is within three standard deviations of the mean.
 
 **Image \#6.1: Empirical Rule**
 
-```{r, include=FALSE, fig.alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations"}
+```{r, echo=FALSE, fig.alt="bell curve showing 58% of the data between -1 to 1 standard deviation, 95% of the data between -2 and 2 standard deviations, and 99.7% of the data between 03 and 3 standard deviations"}
 knitr::include_graphics("Empirical_rule.png")
 ```
 
@@ -6969,7 +6972,7 @@ One last thing to know about confidence is how the sample size and confidence le
 Think about shooting an arrow into the target. Suppose you are really good at that and that you have a 90% chance of hitting the bull's eye. Now the bull's eye is very small. Since you hit the bull's eye
 approximately 90% of the time, then you probably hit inside the next ring out 95% of the time. You have a better chance of doing this, but the circle is bigger. You probably have a 99% chance of hitting the target, but that is a much bigger circle to hit. You can see, as your confidence in hitting the target increases, the circle you hit gets bigger. The same is true for confidence intervals. This is demonstrated in figure \#8.1.1.
 
-```{r, include=FALSE, fig.alt="Graph showing that 90% confident interval is narrower than a 95% confident interval, which is narrower than a 99% confidence interval"}
+```{r, echo=FALSE, fig.alt="Graph showing that 90% confident interval is narrower than a 95% confident interval, which is narrower than a 99% confidence interval"}
 knitr::include_graphics("effect_confidence_level.png")
 ```
 
@@ -6978,7 +6981,7 @@ The higher level of confidence makes a wider interval. There's a trade off betwe
 
 Now look at how the sample size affects the size of the interval. Suppose figure \#8.1.2 represents confidence intervals calculated on a 95% interval. A larger sample size from a representative sample makes the width of the interval narrower. This makes sense. Large samples are closer to the true population so the point estimate is pretty close to the true value.
 
-```{r, include=FALSE, fig.alt="Graph showing that a confident interval created with a sample size of 30 is wider than a confident interval created with a sample size of 100, which is wider than a confidence interval created with a sample size of 1000."}
+```{r, echo=FALSE, fig.alt="Graph showing that a confident interval created with a sample size of 30 is wider than a confident interval created with a sample size of 100, which is wider than a confidence interval created with a sample size of 1000."}
 knitr::include_graphics("effect_sample_size.png")
 ```
 
